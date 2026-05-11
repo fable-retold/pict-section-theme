@@ -1,0 +1,105 @@
+{
+	"Hash": "night",
+	"Name": "Night",
+	"Category": "Grey",
+	"Version": "0.0.1",
+	"Description": "Near-black, minimal contrast Ported from RetoldRemote-ThemeDefinitions.js to the pict-provider-theme manifest format.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "single",
+		"Default": "dark"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary": "#0A0A0A",
+				"Secondary": "#060606",
+				"Tertiary": "#0E0E0E",
+				"Panel": "#0C0C0C",
+				"Viewer": "#040404",
+				"Hover": "#161616",
+				"Selected": "#252525",
+				"Thumb": "#060606"
+			},
+			"Text": {
+				"Primary": "#888888",
+				"Secondary": "#707070",
+				"Muted": "#555555",
+				"Dim": "#444444",
+				"Placeholder": "#333333"
+			},
+			"Brand": {
+				"Accent": "#666666",
+				"AccentHover": "#808080"
+			},
+			"Border": {
+				"Default": "#1A1A1A",
+				"Light": "#222222"
+			},
+			"Status": {
+				"Danger": "#AA4444",
+				"DangerMuted": "#663333"
+			},
+			"Scrollbar": {
+				"Track": "#1A1A1A",
+				"Hover": "#2A2A2A"
+			},
+			"Selection": {
+				"Background": "rgba(102, 102, 102, 0.2)"
+			},
+			"Focus": {
+				"Outline": "#666666"
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "system-ui, -apple-system, sans-serif",
+				"Mono": "'SF Mono', 'Fira Code', 'Consolas', monospace"
+			}
+		}
+	},
+	"Aliases": {
+		"--retold-bg-primary": "Color.Background.Primary",
+		"--retold-bg-secondary": "Color.Background.Secondary",
+		"--retold-bg-tertiary": "Color.Background.Tertiary",
+		"--retold-bg-panel": "Color.Background.Panel",
+		"--retold-bg-viewer": "Color.Background.Viewer",
+		"--retold-bg-hover": "Color.Background.Hover",
+		"--retold-bg-selected": "Color.Background.Selected",
+		"--retold-bg-thumb": "Color.Background.Thumb",
+		"--retold-text-primary": "Color.Text.Primary",
+		"--retold-text-secondary": "Color.Text.Secondary",
+		"--retold-text-muted": "Color.Text.Muted",
+		"--retold-text-dim": "Color.Text.Dim",
+		"--retold-text-placeholder": "Color.Text.Placeholder",
+		"--retold-accent": "Color.Brand.Accent",
+		"--retold-accent-hover": "Color.Brand.AccentHover",
+		"--retold-border": "Color.Border.Default",
+		"--retold-border-light": "Color.Border.Light",
+		"--retold-danger": "Color.Status.Danger",
+		"--retold-danger-muted": "Color.Status.DangerMuted",
+		"--retold-scrollbar": "Color.Scrollbar.Track",
+		"--retold-scrollbar-hover": "Color.Scrollbar.Hover",
+		"--retold-selection-bg": "Color.Selection.Background",
+		"--retold-focus-outline": "Color.Focus.Outline",
+		"--retold-font-family": "Typography.Family.Sans",
+		"--retold-font-mono": "Typography.Family.Mono"
+	},
+	"IconColors": {
+		"Primary": "#707070",
+		"Accent": "#666666",
+		"Muted": "#444444",
+		"Light": "#0E0E0E",
+		"WarmBeige": "#121212",
+		"TealTint": "#0C0C0C",
+		"Lavender": "#101010",
+		"AmberTint": "#141210",
+		"PdfFill": "#141010",
+		"PdfText": "#AA4444"
+	},
+	"CSS": [],
+	"SVG": {},
+	"Image": {},
+	"CompiledAt": "2026-05-03T18:12:53.408Z",
+	"CompilerVersion": 1
+}

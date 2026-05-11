@@ -1,0 +1,71 @@
+{
+	"Hash": "retold-manager",
+	"Name": "Retold Manager",
+	"Description": "Default palette for the Retold Manager application — GitHub-style dark on slate with a parallel light variant. Dark side mirrors retold-manager.css's original colors verbatim; light side is a sympathetic translation tuned for daytime use. The retold-manager.css :root block proxies its --color-* names through these --theme-color-* tokens (with the original hexes as fallbacks), so this theme drives the whole app cleanly and other catalog themes still skin most of it.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "system",
+		"Default": "system"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary":   { "Light": "#f6f8fa", "Dark": "#0e1116" },
+				"Secondary": { "Light": "#eef1f4", "Dark": "#161b22" },
+				"Tertiary":  { "Light": "#e4e8ec", "Dark": "#1c2128" },
+				"Panel":     { "Light": "#ffffff", "Dark": "#161b22" },
+				"PanelAlt":  { "Light": "#f0f3f6", "Dark": "#1c2128" },
+				"Hover":     { "Light": "#eaeef2", "Dark": "#1c2128" },
+				"Selected":  { "Light": "#dbe7ff", "Dark": "#243454" }
+			},
+			"Border": {
+				"Default":   { "Light": "#d0d7de", "Dark": "#30363d" },
+				"Light":     { "Light": "#e1e4e8", "Dark": "#21262d" },
+				"Strong":    { "Light": "#a8b1bb", "Dark": "#484f58" }
+			},
+			"Brand": {
+				"Primary":      { "Light": "#0969da", "Dark": "#2f81f7" },
+				"PrimaryHover": { "Light": "#0550ae", "Dark": "#1f6feb" },
+				"Accent":       { "Light": "#0969da", "Dark": "#2f81f7" },
+				"AccentHover":  { "Light": "#0550ae", "Dark": "#1f6feb" }
+			},
+			"Text": {
+				"Primary":     { "Light": "#1f2328", "Dark": "#e6edf3" },
+				"Secondary":   { "Light": "#3b424a", "Dark": "#c9d1d9" },
+				"Muted":       { "Light": "#656d76", "Dark": "#8b949e" },
+				"Placeholder": { "Light": "#8c959f", "Dark": "#6e7681" },
+				"OnBrand":     { "Light": "#ffffff", "Dark": "#ffffff" }
+			},
+			"Status": {
+				"Success": { "Light": "#1a7f37", "Dark": "#3fb950" },
+				"Danger":  { "Light": "#cf222e", "Dark": "#f85149" },
+				"Warning": { "Light": "#9a6700", "Dark": "#d29922" },
+				"Error":   { "Light": "#cf222e", "Dark": "#f85149" },
+				"Info":    { "Light": "#0969da", "Dark": "#2f81f7" }
+			},
+			"Scrollbar": {
+				"Track": { "Light": "#eef1f4", "Dark": "#161b22" },
+				"Thumb": { "Light": "#c1c8cf", "Dark": "#30363d" },
+				"Hover": { "Light": "#a8b1bb", "Dark": "#484f58" }
+			},
+			"Selection": {
+				"Background": { "Light": "#cfe6ff", "Dark": "#243454" },
+				"Text":       { "Light": "#1f2328", "Dark": "#e6edf3" }
+			},
+			"Focus": {
+				"Outline": { "Light": "#0969da", "Dark": "#2f81f7" }
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "-apple-system, BlinkMacSystemFont, \"SF Pro\", \"Segoe UI\", sans-serif",
+				"Mono": "ui-monospace, \"SF Mono\", Menlo, Monaco, \"Courier New\", monospace"
+			}
+		},
+		"Layout": {
+			"SidebarWidth":    "280px",
+			"TopbarHeight":    "44px",
+			"StatusbarHeight": "28px"
+		}
+	}
+}

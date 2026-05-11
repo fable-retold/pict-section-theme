@@ -1,0 +1,105 @@
+{
+	"Hash": "1970s-console",
+	"Name": "1970s Console",
+	"Category": "Fun",
+	"Version": "0.0.1",
+	"Description": "Amber phosphor on brown-black Ported from RetoldRemote-ThemeDefinitions.js to the pict-provider-theme manifest format.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "single",
+		"Default": "dark"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary": "#1A1000",
+				"Secondary": "#140C00",
+				"Tertiary": "#1E1400",
+				"Panel": "#1C1200",
+				"Viewer": "#100A00",
+				"Hover": "#2A1C00",
+				"Selected": "#3A2800",
+				"Thumb": "#140C00"
+			},
+			"Text": {
+				"Primary": "#FFAA00",
+				"Secondary": "#DD8800",
+				"Muted": "#AA6600",
+				"Dim": "#884400",
+				"Placeholder": "#663300"
+			},
+			"Brand": {
+				"Accent": "#FFCC00",
+				"AccentHover": "#FFDD44"
+			},
+			"Border": {
+				"Default": "#2A1800",
+				"Light": "#3A2200"
+			},
+			"Status": {
+				"Danger": "#FF4400",
+				"DangerMuted": "#AA3300"
+			},
+			"Scrollbar": {
+				"Track": "#2A1800",
+				"Hover": "#3A2800"
+			},
+			"Selection": {
+				"Background": "rgba(255, 204, 0, 0.2)"
+			},
+			"Focus": {
+				"Outline": "#FFCC00"
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "'Courier New', 'Lucida Console', monospace",
+				"Mono": "'Courier New', 'Lucida Console', monospace"
+			}
+		}
+	},
+	"Aliases": {
+		"--retold-bg-primary": "Color.Background.Primary",
+		"--retold-bg-secondary": "Color.Background.Secondary",
+		"--retold-bg-tertiary": "Color.Background.Tertiary",
+		"--retold-bg-panel": "Color.Background.Panel",
+		"--retold-bg-viewer": "Color.Background.Viewer",
+		"--retold-bg-hover": "Color.Background.Hover",
+		"--retold-bg-selected": "Color.Background.Selected",
+		"--retold-bg-thumb": "Color.Background.Thumb",
+		"--retold-text-primary": "Color.Text.Primary",
+		"--retold-text-secondary": "Color.Text.Secondary",
+		"--retold-text-muted": "Color.Text.Muted",
+		"--retold-text-dim": "Color.Text.Dim",
+		"--retold-text-placeholder": "Color.Text.Placeholder",
+		"--retold-accent": "Color.Brand.Accent",
+		"--retold-accent-hover": "Color.Brand.AccentHover",
+		"--retold-border": "Color.Border.Default",
+		"--retold-border-light": "Color.Border.Light",
+		"--retold-danger": "Color.Status.Danger",
+		"--retold-danger-muted": "Color.Status.DangerMuted",
+		"--retold-scrollbar": "Color.Scrollbar.Track",
+		"--retold-scrollbar-hover": "Color.Scrollbar.Hover",
+		"--retold-selection-bg": "Color.Selection.Background",
+		"--retold-focus-outline": "Color.Focus.Outline",
+		"--retold-font-family": "Typography.Family.Sans",
+		"--retold-font-mono": "Typography.Family.Mono"
+	},
+	"IconColors": {
+		"Primary": "#DD8800",
+		"Accent": "#FFCC00",
+		"Muted": "#884400",
+		"Light": "#1E1400",
+		"WarmBeige": "#201800",
+		"TealTint": "#1A1000",
+		"Lavender": "#1C1200",
+		"AmberTint": "#221800",
+		"PdfFill": "#201000",
+		"PdfText": "#FF4400"
+	},
+	"CSS": [],
+	"SVG": {},
+	"Image": {},
+	"CompiledAt": "2026-05-03T18:12:53.405Z",
+	"CompilerVersion": 1
+}

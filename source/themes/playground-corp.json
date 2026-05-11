@@ -1,0 +1,112 @@
+{
+	"Hash": "playground-corp",
+	"Name": "Playground Corp",
+	"Version": "0.0.1",
+	"Description": "A different paired starter — corporate teal palette, rounder corners.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "system",
+		"Default": "light"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary":   { "Light": "#fbfbfd", "Dark": "#0e1416" },
+				"Secondary": { "Light": "#eef3f6", "Dark": "#152024" },
+				"Tertiary":  { "Light": "#dde7ec", "Dark": "#1e2c30" },
+				"Panel":     { "Light": "#ffffff", "Dark": "#162126" },
+				"Hover":     { "Light": "#e5edf1", "Dark": "#1d292e" }
+			},
+			"Text": {
+				"Primary":     { "Light": "#0a1d22", "Dark": "#e3edf0" },
+				"Secondary":   { "Light": "#3a5b65", "Dark": "#a8c0c8" },
+				"Muted":       { "Light": "#647e87", "Dark": "#7a929a" },
+				"OnBrand":     { "Light": "#ffffff", "Dark": "#ffffff" }
+			},
+			"Brand": {
+				"Primary":      { "Light": "#117a8b", "Dark": "#3ec0d4" },
+				"PrimaryHover": { "Light": "#0e6271", "Dark": "#5fd0e0" },
+				"Accent":       { "Light": "#d97706", "Dark": "#fb923c" }
+			},
+			"Border": {
+				"Default": { "Light": "#cfdce1", "Dark": "#2c3a3f" },
+				"Strong":  { "Light": "#86a3ac", "Dark": "#4d5e64" }
+			},
+			"Status": {
+				"Success": { "Light": "#0f7a52", "Dark": "#34d399" },
+				"Warning": { "Light": "#b45309", "Dark": "#fbbf24" },
+				"Error":   { "Light": "#9f1239", "Dark": "#fb7185" },
+				"Info":    { "Light": "#1e6fbe", "Dark": "#60a5fa" }
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "Inter, system-ui, sans-serif",
+				"Mono": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+			},
+			"Size": {
+				"SM": "0.875rem",
+				"MD": "1rem",
+				"LG": "1.25rem"
+			},
+			"Weight": {
+				"Regular": "400",
+				"Bold": "700"
+			}
+		},
+		"Spacing": {
+			"XS": "4px",
+			"SM": "8px",
+			"MD": "14px",
+			"LG": "20px",
+			"XL": "28px"
+		},
+		"Radius": {
+			"SM": "4px",
+			"MD": "10px",
+			"LG": "16px"
+		}
+	},
+	"Brand": {
+		"Name": "Corp"
+	},
+	"Aliases": {
+		"--pict-modal-overlay-bg":          "Color.Background.Tertiary",
+		"--pict-modal-bg":                  "Color.Background.Panel",
+		"--pict-modal-fg":                  "Color.Text.Primary",
+		"--pict-modal-border":              "Color.Border.Default",
+		"--pict-modal-shadow":              "Color.Border.Strong",
+		"--pict-modal-header-bg":           "Color.Background.Secondary",
+		"--pict-modal-header-fg":           "Color.Text.Primary",
+		"--pict-modal-header-border":       "Color.Border.Default",
+		"--pict-modal-btn-bg":              "Color.Background.Secondary",
+		"--pict-modal-btn-fg":              "Color.Text.Primary",
+		"--pict-modal-btn-hover-bg":        "Color.Background.Hover",
+		"--pict-modal-btn-primary-bg":      "Color.Brand.Primary",
+		"--pict-modal-btn-primary-fg":      "Color.Text.OnBrand",
+		"--pict-modal-btn-primary-hover-bg":"Color.Brand.PrimaryHover",
+		"--pict-modal-btn-danger-bg":       "Color.Status.Error",
+		"--pict-modal-btn-danger-fg":       "Color.Text.OnBrand",
+		"--pict-modal-btn-danger-hover-bg": "Color.Status.Error",
+		"--pict-modal-toast-bg":            "Color.Background.Panel",
+		"--pict-modal-toast-fg":            "Color.Text.Primary",
+		"--pict-modal-toast-shadow":        "Color.Border.Strong",
+		"--pict-modal-toast-success-bg":    "Color.Status.Success",
+		"--pict-modal-toast-error-bg":      "Color.Status.Error",
+		"--pict-modal-toast-warning-bg":    "Color.Status.Warning",
+		"--pict-modal-toast-info-bg":       "Color.Status.Info",
+		"--pict-modal-tooltip-bg":          "Color.Background.Tertiary",
+		"--pict-modal-tooltip-fg":          "Color.Text.Primary",
+		"--pict-modal-font-family":         "Typography.Family.Sans",
+
+		"--pict-um-bg":          "Color.Background.Panel",
+		"--pict-um-fg":          "Color.Text.Primary",
+		"--pict-um-muted":       "Color.Text.Muted",
+		"--pict-um-accent":      "Color.Brand.Primary",
+		"--pict-um-border":      "Color.Border.Default",
+		"--pict-um-border-soft": "Color.Border.Light",
+		"--pict-um-input-bg":    "Color.Background.Primary",
+		"--pict-um-pill-bg":     "Color.Background.Tertiary",
+		"--pict-um-font":        "Typography.Family.Sans"
+	}
+}

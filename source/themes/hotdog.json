@@ -1,0 +1,105 @@
+{
+	"Hash": "hotdog",
+	"Name": "Hotdog",
+	"Category": "Fun",
+	"Version": "0.0.1",
+	"Description": "Red and mustard yellow, garish Ported from RetoldRemote-ThemeDefinitions.js to the pict-provider-theme manifest format.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "single",
+		"Default": "dark"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary": "#8B0000",
+				"Secondary": "#6B0000",
+				"Tertiary": "#7B0000",
+				"Panel": "#750000",
+				"Viewer": "#550000",
+				"Hover": "#AA1111",
+				"Selected": "#BB3300",
+				"Thumb": "#6B0000"
+			},
+			"Text": {
+				"Primary": "#FFD700",
+				"Secondary": "#FFC000",
+				"Muted": "#CC9900",
+				"Dim": "#AA7700",
+				"Placeholder": "#886600"
+			},
+			"Brand": {
+				"Accent": "#FFD700",
+				"AccentHover": "#FFEE44"
+			},
+			"Border": {
+				"Default": "#AA2222",
+				"Light": "#BB3333"
+			},
+			"Status": {
+				"Danger": "#FFFF00",
+				"DangerMuted": "#CCCC00"
+			},
+			"Scrollbar": {
+				"Track": "#AA2222",
+				"Hover": "#CC3333"
+			},
+			"Selection": {
+				"Background": "rgba(255, 215, 0, 0.3)"
+			},
+			"Focus": {
+				"Outline": "#FFD700"
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "Impact, 'Arial Black', sans-serif",
+				"Mono": "'Courier New', monospace"
+			}
+		}
+	},
+	"Aliases": {
+		"--retold-bg-primary": "Color.Background.Primary",
+		"--retold-bg-secondary": "Color.Background.Secondary",
+		"--retold-bg-tertiary": "Color.Background.Tertiary",
+		"--retold-bg-panel": "Color.Background.Panel",
+		"--retold-bg-viewer": "Color.Background.Viewer",
+		"--retold-bg-hover": "Color.Background.Hover",
+		"--retold-bg-selected": "Color.Background.Selected",
+		"--retold-bg-thumb": "Color.Background.Thumb",
+		"--retold-text-primary": "Color.Text.Primary",
+		"--retold-text-secondary": "Color.Text.Secondary",
+		"--retold-text-muted": "Color.Text.Muted",
+		"--retold-text-dim": "Color.Text.Dim",
+		"--retold-text-placeholder": "Color.Text.Placeholder",
+		"--retold-accent": "Color.Brand.Accent",
+		"--retold-accent-hover": "Color.Brand.AccentHover",
+		"--retold-border": "Color.Border.Default",
+		"--retold-border-light": "Color.Border.Light",
+		"--retold-danger": "Color.Status.Danger",
+		"--retold-danger-muted": "Color.Status.DangerMuted",
+		"--retold-scrollbar": "Color.Scrollbar.Track",
+		"--retold-scrollbar-hover": "Color.Scrollbar.Hover",
+		"--retold-selection-bg": "Color.Selection.Background",
+		"--retold-focus-outline": "Color.Focus.Outline",
+		"--retold-font-family": "Typography.Family.Sans",
+		"--retold-font-mono": "Typography.Family.Mono"
+	},
+	"IconColors": {
+		"Primary": "#FFC000",
+		"Accent": "#FFD700",
+		"Muted": "#AA7700",
+		"Light": "#7B0000",
+		"WarmBeige": "#800000",
+		"TealTint": "#6B0000",
+		"Lavender": "#780000",
+		"AmberTint": "#7A1000",
+		"PdfFill": "#6B0000",
+		"PdfText": "#FFFF00"
+	},
+	"CSS": [],
+	"SVG": {},
+	"Image": {},
+	"CompiledAt": "2026-05-03T18:12:53.407Z",
+	"CompilerVersion": 1
+}

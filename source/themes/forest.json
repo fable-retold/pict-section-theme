@@ -1,0 +1,105 @@
+{
+	"Hash": "forest",
+	"Name": "Forest",
+	"Category": "Fun",
+	"Version": "0.0.1",
+	"Description": "Deep greens and earth browns Ported from RetoldRemote-ThemeDefinitions.js to the pict-provider-theme manifest format.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "single",
+		"Default": "dark"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary": "#1A2018",
+				"Secondary": "#141A12",
+				"Tertiary": "#1E2620",
+				"Panel": "#1C221A",
+				"Viewer": "#101410",
+				"Hover": "#283828",
+				"Selected": "#344834",
+				"Thumb": "#141A12"
+			},
+			"Text": {
+				"Primary": "#D0DCC8",
+				"Secondary": "#B0C4A8",
+				"Muted": "#809878",
+				"Dim": "#607858",
+				"Placeholder": "#486040"
+			},
+			"Brand": {
+				"Accent": "#6AAF5C",
+				"AccentHover": "#88CC78"
+			},
+			"Border": {
+				"Default": "#2A3A28",
+				"Light": "#3A4A38"
+			},
+			"Status": {
+				"Danger": "#CC4422",
+				"DangerMuted": "#884422"
+			},
+			"Scrollbar": {
+				"Track": "#2A3A28",
+				"Hover": "#3A4A38"
+			},
+			"Selection": {
+				"Background": "rgba(106, 175, 92, 0.25)"
+			},
+			"Focus": {
+				"Outline": "#6AAF5C"
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "'Palatino Linotype', 'Book Antiqua', Palatino, serif",
+				"Mono": "'Courier New', monospace"
+			}
+		}
+	},
+	"Aliases": {
+		"--retold-bg-primary": "Color.Background.Primary",
+		"--retold-bg-secondary": "Color.Background.Secondary",
+		"--retold-bg-tertiary": "Color.Background.Tertiary",
+		"--retold-bg-panel": "Color.Background.Panel",
+		"--retold-bg-viewer": "Color.Background.Viewer",
+		"--retold-bg-hover": "Color.Background.Hover",
+		"--retold-bg-selected": "Color.Background.Selected",
+		"--retold-bg-thumb": "Color.Background.Thumb",
+		"--retold-text-primary": "Color.Text.Primary",
+		"--retold-text-secondary": "Color.Text.Secondary",
+		"--retold-text-muted": "Color.Text.Muted",
+		"--retold-text-dim": "Color.Text.Dim",
+		"--retold-text-placeholder": "Color.Text.Placeholder",
+		"--retold-accent": "Color.Brand.Accent",
+		"--retold-accent-hover": "Color.Brand.AccentHover",
+		"--retold-border": "Color.Border.Default",
+		"--retold-border-light": "Color.Border.Light",
+		"--retold-danger": "Color.Status.Danger",
+		"--retold-danger-muted": "Color.Status.DangerMuted",
+		"--retold-scrollbar": "Color.Scrollbar.Track",
+		"--retold-scrollbar-hover": "Color.Scrollbar.Hover",
+		"--retold-selection-bg": "Color.Selection.Background",
+		"--retold-focus-outline": "Color.Focus.Outline",
+		"--retold-font-family": "Typography.Family.Sans",
+		"--retold-font-mono": "Typography.Family.Mono"
+	},
+	"IconColors": {
+		"Primary": "#B0C4A8",
+		"Accent": "#6AAF5C",
+		"Muted": "#607858",
+		"Light": "#1E2620",
+		"WarmBeige": "#22281E",
+		"TealTint": "#1A221A",
+		"Lavender": "#1E2420",
+		"AmberTint": "#262218",
+		"PdfFill": "#261A18",
+		"PdfText": "#CC4422"
+	},
+	"CSS": [],
+	"SVG": {},
+	"Image": {},
+	"CompiledAt": "2026-05-03T18:12:53.407Z",
+	"CompilerVersion": 1
+}

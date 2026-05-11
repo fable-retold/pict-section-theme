@@ -1,0 +1,131 @@
+{
+	"Hash": "retold-mono",
+	"Name": "Retold Mono",
+	"Version": "0.0.2",
+	"Description": "High-contrast monochrome theme — black on white in light mode, white on black in dark mode. Useful for print, simple admin tooling, and as a paired-mode reference theme that proves the toggle works on something visually unmistakable.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "system",
+		"Default": "system"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary":   { "Light": "#ffffff", "Dark": "#000000" },
+				"Secondary": { "Light": "#f0f0f0", "Dark": "#101010" },
+				"Tertiary":  { "Light": "#e2e2e2", "Dark": "#1c1c1c" },
+				"Panel":     { "Light": "#ffffff", "Dark": "#000000" },
+				"Hover":     { "Light": "#ebebeb", "Dark": "#1a1a1a" },
+				"Selected":  { "Light": "#d6d6d6", "Dark": "#2a2a2a" }
+			},
+			"Text": {
+				"Primary":     { "Light": "#000000", "Dark": "#ffffff" },
+				"Secondary":   { "Light": "#222222", "Dark": "#dddddd" },
+				"Muted":       { "Light": "#555555", "Dark": "#aaaaaa" },
+				"Placeholder": { "Light": "#888888", "Dark": "#777777" }
+			},
+			"Brand": {
+				"Primary":      { "Light": "#000000", "Dark": "#ffffff" },
+				"PrimaryHover": { "Light": "#222222", "Dark": "#dddddd" },
+				"Accent":       { "Light": "#444444", "Dark": "#bbbbbb" }
+			},
+			"Border": {
+				"Default": { "Light": "#888888", "Dark": "#666666" },
+				"Light":   { "Light": "#cccccc", "Dark": "#333333" },
+				"Strong":  { "Light": "#000000", "Dark": "#ffffff" }
+			},
+			"Status": {
+				"Success": { "Light": "#000000", "Dark": "#ffffff" },
+				"Warning": { "Light": "#000000", "Dark": "#ffffff" },
+				"Error":   { "Light": "#000000", "Dark": "#ffffff" },
+				"Info":    { "Light": "#000000", "Dark": "#ffffff" }
+			},
+			"Scrollbar": {
+				"Track": { "Light": "#e0e0e0", "Dark": "#101010" },
+				"Thumb": { "Light": "#888888", "Dark": "#666666" },
+				"Hover": { "Light": "#444444", "Dark": "#bbbbbb" }
+			},
+			"Selection": {
+				"Background": { "Light": "#000000", "Dark": "#ffffff" },
+				"Text":       { "Light": "#ffffff", "Dark": "#000000" }
+			},
+			"Focus": {
+				"Outline": { "Light": "#000000", "Dark": "#ffffff" }
+			},
+			"Shadow": {
+				"Color": { "Light": "rgba(0, 0, 0, 0.18)", "Dark": "rgba(255, 255, 255, 0.18)" }
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "Helvetica, Arial, sans-serif",
+				"Serif": "Georgia, Times New Roman, serif",
+				"Mono": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+			},
+			"Size": {
+				"XS": "0.75rem",
+				"SM": "0.875rem",
+				"MD": "1rem",
+				"LG": "1.125rem",
+				"XL": "1.375rem",
+				"XXL": "1.75rem"
+			},
+			"Weight": {
+				"Regular": "400",
+				"Medium": "600",
+				"Bold": "700"
+			},
+			"LineHeight": {
+				"Tight": "1.15",
+				"Normal": "1.4",
+				"Loose": "1.65"
+			}
+		},
+		"Spacing": {
+			"XS": "4px",
+			"SM": "8px",
+			"MD": "12px",
+			"LG": "16px",
+			"XL": "24px",
+			"XXL": "32px"
+		},
+		"Radius": {
+			"None": "0",
+			"SM": "0",
+			"MD": "0",
+			"LG": "0",
+			"XL": "0",
+			"Pill": "999px"
+		},
+		"Shadow": {
+			"SM": "0 1px 0 var(--theme-color-shadow-color)",
+			"MD": "0 2px 0 var(--theme-color-shadow-color)",
+			"LG": "0 4px 0 var(--theme-color-shadow-color)"
+		},
+		"ZIndex": {
+			"Base": "0",
+			"Dropdown": "100",
+			"Sticky": "200",
+			"Overlay": "900",
+			"Modal": "1000",
+			"Toast": "2000",
+			"Tooltip": "3000"
+		},
+		"Duration": {
+			"Fast": "0ms",
+			"Normal": "0ms",
+			"Slow": "0ms"
+		}
+	},
+	"Brand": {
+		"Name": "Retold Mono",
+		"Tagline": "Black on white. White on black. Nothing else."
+	},
+	"CSS": [
+		{
+			"Hash": "retold-mono-brand-accents",
+			"Priority": 600,
+			"Content": "/* retold-mono — keeps the all-monochrome aesthetic but lets brand colors\n   in for narrow accent moments. The thick rule under H1 is brand primary;\n   the hair rule under H2 is brand secondary. Without a brand registered\n   they fall back to mono black/grey. */\na { text-decoration-color: var(--brand-color-primary-mode, currentColor); text-decoration-thickness: 2px; text-underline-offset: 3px; }\nh1 { border-bottom: 3px solid var(--brand-color-primary-mode, var(--theme-color-text-primary, #000)); padding-bottom: 6px; }\nh2 { border-bottom: 1px solid var(--brand-color-secondary-mode, var(--theme-color-border-default, #888)); padding-bottom: 4px; }"
+		}
+	]
+}
