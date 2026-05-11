@@ -1,16 +1,15 @@
 {
 	"name": "pict-section-theme",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Pict section that bundles every Retold-ecosystem theme (retold-default, retold-mono, twilight, cyberpunk, daylight, neo-tokyo, …) and exposes three reusable views — a theme picker dropdown, a light/dark/system mode toggle, and an embeddable SVG topbar button that pops a theme submenu via pict-section-modal. Wraps pict-provider-theme.",
 	"main": "source/Pict-Section-Theme.js",
 	"bin": {
-		"pict-section-theme-brand":    "bin/pict-section-theme-brand.js",
+		"pict-section-theme-brand": "bin/pict-section-theme-brand.js",
 		"pict-section-theme-favicons": "bin/pict-section-theme-favicons.js"
 	},
 	"scripts": {
 		"test": "npx mocha -u tdd --exit --timeout 5000 ./test/*_tests.js"
 	},
-	"peerDependenciesMeta_": "retold-sharp is only needed for the favicon CLI; the main lib doesn't pull it in",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/stevenvelozo/pict-section-theme.git"
@@ -30,10 +29,14 @@
 		"pict-view": "^1.0.68"
 	},
 	"peerDependencies": {
-		"pict-section-modal": "^1.0.0"
+		"pict-section-modal": "^1.0.0",
+		"retold-sharp": "^0.0.3"
 	},
 	"peerDependenciesMeta": {
 		"pict-section-modal": {
+			"optional": true
+		},
+		"retold-sharp": {
 			"optional": true
 		}
 	},
