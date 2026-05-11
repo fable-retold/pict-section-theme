@@ -1,0 +1,128 @@
+{
+	"Hash": "retold-content-system",
+	"Name": "Retold Content System",
+	"Version": "0.0.1",
+	"Description": "Default palette for the Retold Content System editor — warm beige with teal accents. Light side preserves the original retold-content-system.css palette verbatim; dark side keeps the teal accent and warms the backgrounds into a deep walnut/charcoal range so dark mode reads as the same family of values rather than a generic dark theme.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "system",
+		"Default": "system"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary":   { "Light": "#F5F3EE", "Dark": "#1F1B17" },
+				"Secondary": { "Light": "#FAF8F4", "Dark": "#2A251F" },
+				"Tertiary":  { "Light": "#F0EDE8", "Dark": "#332D26" },
+				"Panel":     { "Light": "#FFFFFF", "Dark": "#26221C" },
+				"Hover":     { "Light": "#EDE9E3", "Dark": "#383028" },
+				"Selected":  { "Light": "#DCE9E7", "Dark": "#1E3833" }
+			},
+			"Text": {
+				"Primary":     { "Light": "#3D3229", "Dark": "#E8DCC8" },
+				"Secondary":   { "Light": "#5E5549", "Dark": "#C0B5A4" },
+				"Muted":       { "Light": "#8A7F72", "Dark": "#8E8478" },
+				"Placeholder": { "Light": "#A89E91", "Dark": "#6E6457" },
+				"OnBrand":     { "Light": "#FFFFFF", "Dark": "#1F1B17" }
+			},
+			"Brand": {
+				"Primary":      { "Light": "#2E7D74", "Dark": "#4FB3A6" },
+				"PrimaryHover": { "Light": "#3A9E92", "Dark": "#65CBBE" },
+				"Accent":       { "Light": "#2E7D74", "Dark": "#4FB3A6" },
+				"AccentHover":  { "Light": "#3A9E92", "Dark": "#65CBBE" }
+			},
+			"Border": {
+				"Default": { "Light": "#DDD6CA", "Dark": "#3F362C" },
+				"Light":   { "Light": "#E8E2D7", "Dark": "#33291F" },
+				"Strong":  { "Light": "#C4BDB0", "Dark": "#5A4F40" }
+			},
+			"Status": {
+				"Success": { "Light": "#7BC47F", "Dark": "#8FD493" },
+				"Warning": { "Light": "#E8A94D", "Dark": "#F0BE6E" },
+				"Error":   { "Light": "#D9534F", "Dark": "#E87B78" },
+				"Info":    { "Light": "#5DA6C7", "Dark": "#7FBDD8" }
+			},
+			"Scrollbar": {
+				"Track": { "Light": "#F5F0E8", "Dark": "#26221C" },
+				"Thumb": { "Light": "#C4BDB0", "Dark": "#4A4036" },
+				"Hover": { "Light": "#8A7F72", "Dark": "#6A5F50" }
+			},
+			"Selection": {
+				"Background": { "Light": "#CDE3E0", "Dark": "#2E5B55" },
+				"Text":       { "Light": "#3D3229", "Dark": "#E8DCC8" }
+			},
+			"Focus": {
+				"Outline": { "Light": "#2E7D74", "Dark": "#4FB3A6" }
+			},
+			"Shadow": {
+				"Color": { "Light": "rgba(61, 50, 41, 0.12)", "Dark": "rgba(0, 0, 0, 0.55)" }
+			},
+			"Syntax": {
+				"Keyword":     { "Light": "#A0532E", "Dark": "#E89A6E" },
+				"String":      { "Light": "#3F8A52", "Dark": "#8FD493" },
+				"Number":      { "Light": "#A86B00", "Dark": "#E8A94D" },
+				"Comment":     { "Light": "#8A7F72", "Dark": "#8E8478" },
+				"Operator":    { "Light": "#2E7D74", "Dark": "#4FB3A6" },
+				"Punctuation": { "Light": "#5E5549", "Dark": "#C0B5A4" },
+				"Function":    { "Light": "#2E5E96", "Dark": "#7FBDD8" },
+				"Variable":    { "Light": "#3D3229", "Dark": "#E8DCC8" },
+				"Type":        { "Light": "#A86B00", "Dark": "#E8A94D" },
+				"Builtin":     { "Light": "#A86B00", "Dark": "#E8A94D" },
+				"Property":    { "Light": "#A0532E", "Dark": "#E89A6E" },
+				"Tag":         { "Light": "#A0532E", "Dark": "#E89A6E" },
+				"AttrName":    { "Light": "#A86B00", "Dark": "#E8A94D" },
+				"AttrValue":   { "Light": "#3F8A52", "Dark": "#8FD493" }
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+				"Serif": "Georgia, Cambria, 'Times New Roman', Times, serif",
+				"Mono": "'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace"
+			},
+			"Size": {
+				"XS": "0.75rem",
+				"SM": "0.875rem",
+				"MD": "1rem",
+				"LG": "1.125rem",
+				"XL": "1.375rem",
+				"XXL": "1.75rem"
+			},
+			"Weight": {
+				"Regular": "400",
+				"Medium": "500",
+				"Bold": "700"
+			},
+			"LineHeight": {
+				"Tight": "1.2",
+				"Normal": "1.5",
+				"Loose": "1.7"
+			}
+		},
+		"Spacing": {
+			"XS": "4px",
+			"SM": "8px",
+			"MD": "12px",
+			"LG": "16px",
+			"XL": "24px",
+			"XXL": "32px"
+		},
+		"Radius": {
+			"None": "0",
+			"SM": "2px",
+			"MD": "4px",
+			"LG": "8px",
+			"XL": "12px",
+			"Pill": "999px"
+		},
+		"Layout": {
+			"SidebarWidth":    "250px",
+			"TopbarHeight":    "48px",
+			"StatusbarHeight": "28px"
+		}
+	},
+	"Brand": {
+		"Name": "Retold Content",
+		"Tagline": "Author content for the Retold ecosystem."
+	}
+}
