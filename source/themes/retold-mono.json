@@ -54,6 +54,22 @@
 			},
 			"Shadow": {
 				"Color": { "Light": "rgba(0, 0, 0, 0.18)", "Dark": "rgba(255, 255, 255, 0.18)" }
+			},
+			"Syntax": {
+				"Keyword":     { "Light": "#000000", "Dark": "#ffffff" },
+				"String":      { "Light": "#555555", "Dark": "#cccccc" },
+				"Number":      { "Light": "#000000", "Dark": "#ffffff" },
+				"Comment":     { "Light": "#888888", "Dark": "#888888" },
+				"Operator":    { "Light": "#000000", "Dark": "#ffffff" },
+				"Punctuation": { "Light": "#444444", "Dark": "#bbbbbb" },
+				"Function":    { "Light": "#000000", "Dark": "#ffffff" },
+				"Variable":    { "Light": "#000000", "Dark": "#ffffff" },
+				"Type":        { "Light": "#222222", "Dark": "#dddddd" },
+				"Builtin":     { "Light": "#222222", "Dark": "#dddddd" },
+				"Property":    { "Light": "#444444", "Dark": "#bbbbbb" },
+				"Tag":         { "Light": "#000000", "Dark": "#ffffff" },
+				"AttrName":    { "Light": "#444444", "Dark": "#bbbbbb" },
+				"AttrValue":   { "Light": "#555555", "Dark": "#cccccc" }
 			}
 		},
 		"Typography": {

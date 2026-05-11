@@ -58,7 +58,8 @@ class ThemeRegistry
 			{ Hash: 'retold-mono',        Category: 'Default',  Bundle: require('./retold-mono.json') },
 
 			// App-extracted themes (named after their host app)
-			{ Hash: 'retold-manager',     Category: 'App',      Bundle: require('./retold-manager.json') },
+			{ Hash: 'retold-manager',         Category: 'App',  Bundle: require('./retold-manager.json') },
+			{ Hash: 'retold-content-system',  Category: 'App',  Bundle: require('./retold-content-system.json') },
 
 			// Playground / starter paired themes (have light/dark)
 			{ Hash: 'playground-corp',    Category: 'Paired',   Bundle: require('./playground-corp.json') },

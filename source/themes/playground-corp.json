@@ -37,6 +37,22 @@
 				"Warning": { "Light": "#b45309", "Dark": "#fbbf24" },
 				"Error":   { "Light": "#9f1239", "Dark": "#fb7185" },
 				"Info":    { "Light": "#1e6fbe", "Dark": "#60a5fa" }
+			},
+			"Syntax": {
+				"Keyword":     { "Light": "#a626a4", "Dark": "#c678dd" },
+				"String":      { "Light": "#50a14f", "Dark": "#98c379" },
+				"Number":      { "Light": "#986801", "Dark": "#d19a66" },
+				"Comment":     { "Light": "#a0a1a7", "Dark": "#7f848e" },
+				"Operator":    { "Light": "#0184bc", "Dark": "#56b6c2" },
+				"Punctuation": { "Light": "#383a42", "Dark": "#abb2bf" },
+				"Function":    { "Light": "#4078f2", "Dark": "#61afef" },
+				"Variable":    { "Light": "#383a42", "Dark": "#e06c75" },
+				"Type":        { "Light": "#c18401", "Dark": "#e5c07b" },
+				"Builtin":     { "Light": "#986801", "Dark": "#d19a66" },
+				"Property":    { "Light": "#e45649", "Dark": "#e06c75" },
+				"Tag":         { "Light": "#e45649", "Dark": "#e06c75" },
+				"AttrName":    { "Light": "#986801", "Dark": "#d19a66" },
+				"AttrValue":   { "Light": "#50a14f", "Dark": "#98c379" }
 			}
 		},
 		"Typography": {

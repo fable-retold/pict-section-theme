@@ -344,6 +344,90 @@ class PictSectionThemeProvider extends libPictProvider
 		// theme are all in place before addProvider() returns.
 		_bootstrap(this.pict, this.options);
 	}
+
+	/**
+	 * Embed theme controls into a host-supplied container.
+	 *
+	 * The Theme-Button view ships a popover that hosts the picker + mode
+	 * toggle + scale select — convenient for "drop a theme menu in the
+	 * topbar" but not for apps that already have a settings surface and
+	 * want the controls inline there. `mount()` writes the destination
+	 * divs each theme view expects into the supplied container, then
+	 * calls render() on each requested view.
+	 *
+	 * Important: each theme view has a SINGLE default destination id
+	 * (e.g. `#Theme-Picker`). Mounting overrides where the view paints —
+	 * once mount() is called, the picker / toggle / scale destinations
+	 * live inside the supplied container. Combining a mount() with a
+	 * Theme-Button popover that ALSO hosts these views causes duplicate
+	 * destination ids and undefined behaviour; pick one host per view.
+	 *
+	 * @param {object} pOptions
+	 * @param {string|HTMLElement} pOptions.Container - CSS selector or element
+	 * @param {Array<string>} [pOptions.Views] - short names; default ['Picker','ModeToggle','ScaleSelect']
+	 * @param {string} [pOptions.WrapperClass] - class added to the outer wrapper div
+	 * @returns {object|null} { container, viewsRendered } on success, null if the container can't be resolved
+	 */
+	mount(pOptions)
+	{
+		let tmpOpts = pOptions || {};
+		let tmpContainer = tmpOpts.Container;
+		if (!tmpContainer) { return null; }
+		let tmpEl = (typeof tmpContainer === 'string')
+			? (this.pict && this.pict.ContentAssignment
+				? this.pict.ContentAssignment.getElement(tmpContainer)
+				: document.querySelector(tmpContainer))
+			: tmpContainer;
+		// ContentAssignment.getElement returns an array-like; normalise to one node.
+		if (tmpEl && tmpEl.length && !tmpEl.tagName) { tmpEl = tmpEl[0]; }
+		if (!tmpEl)
+		{
+			if (this.pict && this.pict.log && this.pict.log.warn)
+			{
+				this.pict.log.warn('pict-section-theme.mount: container not found for ' + tmpContainer);
+			}
+			return null;
+		}
+
+		let tmpRequested = Array.isArray(tmpOpts.Views) && tmpOpts.Views.length
+			? tmpOpts.Views
+			: ['Picker', 'ModeToggle', 'ScaleSelect'];
+
+		// Build a wrapper that carries one row per requested view; each row
+		// contains the destination div the view's render() will write into.
+		let tmpRows = [];
+		let tmpRendered = [];
+		for (let i = 0; i < tmpRequested.length; i++)
+		{
+			let tmpEntry = _Views[tmpRequested[i]];
+			if (!tmpEntry) { continue; }
+			let tmpDestSel = tmpEntry.lib.default_configuration.DefaultDestinationAddress || '';
+			let tmpDestId = tmpDestSel.replace(/^#/, '');
+			if (!tmpDestId) { continue; }
+			tmpRows.push(
+				'<div class="pict-theme-mount-row pict-theme-mount-row-' + tmpEntry.hash.toLowerCase() + '">'
+					+ '<div id="' + tmpDestId + '"></div>'
+				+ '</div>');
+			tmpRendered.push(tmpEntry.hash);
+		}
+
+		let tmpWrapperClass = 'pict-theme-mount' + (tmpOpts.WrapperClass ? ' ' + tmpOpts.WrapperClass : '');
+		tmpEl.innerHTML = '<div class="' + tmpWrapperClass + '">' + tmpRows.join('') + '</div>';
+
+		// Render each requested view. Each render() targets the destination
+		// id we just stamped into the wrapper.
+		for (let i = 0; i < tmpRendered.length; i++)
+		{
+			let tmpView = this.pict.views[tmpRendered[i]];
+			if (tmpView && typeof tmpView.render === 'function')
+			{
+				try { tmpView.render(); }
+				catch (pErr) { /* a view render failure shouldn't break the host */ }
+			}
+		}
+
+		return { container: tmpEl, viewsRendered: tmpRendered };
+	}
 }
 
 // ── Legacy install() ─────────────────────────────────────────────────────

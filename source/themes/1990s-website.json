@@ -49,6 +49,22 @@
 			},
 			"Focus": {
 				"Outline": "#0000FF"
+			},
+			"Syntax": {
+				"Keyword":     "#0000FF",
+				"String":      "#008000",
+				"Number":      "#A52A2A",
+				"Comment":     "#808080",
+				"Operator":    "#000080",
+				"Punctuation": "#000000",
+				"Function":    "#0000A0",
+				"Variable":    "#000000",
+				"Type":        "#A52A2A",
+				"Builtin":     "#A52A2A",
+				"Property":    "#800080",
+				"Tag":         "#800080",
+				"AttrName":    "#A52A2A",
+				"AttrValue":   "#008000"
 			}
 		},
 		"Typography": {

@@ -49,6 +49,22 @@
 			},
 			"Focus": {
 				"Outline": "#FF2D8A"
+			},
+			"Syntax": {
+				"Keyword":     "#FF4E9F",
+				"String":      "#A1FFCE",
+				"Number":      "#FFD93D",
+				"Comment":     "#807A9E",
+				"Operator":    "#7DF9FF",
+				"Punctuation": "#C0BCEB",
+				"Function":    "#FFCC80",
+				"Variable":    "#E0D8FF",
+				"Type":        "#FFD93D",
+				"Builtin":     "#FFD93D",
+				"Property":    "#FF6E6E",
+				"Tag":         "#FF6E6E",
+				"AttrName":    "#FFD93D",
+				"AttrValue":   "#A1FFCE"
 			}
 		},
 		"Typography": {
