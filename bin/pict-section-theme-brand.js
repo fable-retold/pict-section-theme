@@ -74,10 +74,27 @@
  *     }
  *   }
  *
- * --favicons is skipped when not supplied; pass a dir to also write
- * favicon.svg / favicon-light.svg / favicon-dark.svg / PNG rasters
- * (16/32/48/64/180/192/512). PNG sizes need retold-sharp; if missing,
- * a warning is printed and only the SVGs are written.
+ * --favicons is skipped when not supplied; pass a dir to write the full
+ * favicon set:
+ *   - favicon.svg / favicon-light.svg / favicon-dark.svg
+ *   - favicon-16.png / favicon-32.png / favicon-48.png / favicon-64.png
+ *   - favicon-192.png / favicon-512.png
+ *   - apple-touch-icon.png (180x180)
+ *
+ * PNG generation needs the `retold-sharp` package.  pict-section-theme
+ * deliberately doesn't carry retold-sharp in its own dep tree — apps that
+ * only consume the theme runtime shouldn't pull a native binary they
+ * never run.  But when a developer invokes the brand CLI (typically via
+ * `npm run brand` chained to `prebuild`), this script auto-installs
+ * retold-sharp into the consuming app's devDependencies as a one-time
+ * setup.  Every subsequent `npm install` then picks it up via the saved
+ * dep entry — no second auto-install, no nag, no manual step.
+ *
+ * The auto-install only fires when --favicons is supplied AND retold-sharp
+ * isn't already resolvable.  If the install fails (rare — platform
+ * without sharp native-binary support), the script falls through to SVG
+ * only, which is sufficient for every modern browser, and prints a
+ * one-time retry hint.
  */
 
 'use strict';
@@ -122,6 +139,16 @@ function parseArgs(pArgv)
 			console.log('    pict-section-theme-brand [--package <path>]');
 			console.log('        [--palette <key>] [--display-name <text>] [--tagline <text>]');
 			console.log('        [--favicons <dir>] [--quiet]');
+			console.log('');
+			console.log('Favicons:');
+			console.log('  When --favicons is supplied, the script writes:');
+			console.log('    - favicon.svg / favicon-light.svg / favicon-dark.svg');
+			console.log('    - favicon-16/32/48/64/192/512.png + apple-touch-icon.png');
+			console.log('  PNG generation uses `retold-sharp`.  On the first run it is auto-');
+			console.log('  installed into the consuming app as a devDependency so future');
+			console.log('  `npm install` picks it up automatically — no per-developer setup.');
+			console.log('  If the install fails (rare — platform without sharp binary support)');
+			console.log('  the script falls through to SVG only and prints a retry hint.');
 			process.exit(0);
 		}
 	}
@@ -275,7 +302,86 @@ function resolveSharp(pSearchPaths)
 	return null;
 }
 
-async function writeFavicons(pBrand, pOutDir, pSearchPaths, pQuiet)
+/**
+ * Install retold-sharp into the consuming app's devDependencies so PNG
+ * favicon rasterization works as part of the build.  pict-section-theme
+ * keeps retold-sharp out of its own dep tree so apps that only use the
+ * theme runtime (and not the brand CLI) don't pull a native binary
+ * they'll never run.  But when a developer DOES invoke the brand CLI
+ * (typically via `npm run brand` / `prebuild`), the build process
+ * should "just work" — generate PNGs without manual setup.
+ *
+ * Strategy: spawn `npm install --save-dev retold-sharp` synchronously
+ * in the target package's directory.  On the first build it adds the
+ * dep + populates node_modules; every subsequent `npm install` in the
+ * app picks it up via the saved devDependency entry.  No second auto-
+ * install needed.  Native-binary failures (rare platforms where sharp
+ * can't compile) surface as the npm install exit code; we warn and
+ * fall through to SVG-only output.
+ *
+ * @param {string} pTargetPkgDir - absolute path to the consumer's package dir
+ * @param {boolean} pQuiet - suppress non-error output
+ * @returns {function|null} retold-sharp prototype if installed successfully, null if not
+ */
+function ensureSharp(pSearchPaths, pTargetPkgDir, pQuiet)
+{
+	// Fast path: already installed somewhere reachable.
+	let tmpSharp = resolveSharp(pSearchPaths);
+	if (tmpSharp) { return tmpSharp; }
+
+	// No target package dir means we can't safely persist a dep — fall
+	// back to a one-time warn so the user knows PNGs won't be rendered.
+	if (!pTargetPkgDir)
+	{
+		return null;
+	}
+
+	if (!pQuiet)
+	{
+		console.log('Brand: retold-sharp not found in node_modules.');
+		console.log('       Installing it now as --save-dev so PNG favicons render — this');
+		console.log('       is a one-time setup; future `npm install` will pull it via the');
+		console.log('       saved devDependency entry.');
+	}
+
+	let libChildProcess = require('child_process');
+	let tmpResult = libChildProcess.spawnSync(
+		'npm',
+		['install', '--save-dev', 'retold-sharp'],
+		{
+			cwd:   pTargetPkgDir,
+			stdio: pQuiet ? 'ignore' : 'inherit',
+			env:   process.env,
+			shell: false
+		});
+	if (tmpResult.error || tmpResult.status !== 0)
+	{
+		if (!pQuiet)
+		{
+			console.warn('Brand: failed to install retold-sharp automatically '
+				+ '(exit ' + (tmpResult.status != null ? tmpResult.status : '?') + ').');
+			console.warn('       Skipping PNG raster sizes.  Most browsers are fine with the SVG');
+			console.warn('       favicons alone.  If you need PNGs (older browsers / iOS home');
+			console.warn('       screen icons), retry manually:');
+			console.warn('           npm install --save-dev retold-sharp');
+		}
+		return null;
+	}
+
+	// Re-resolve with the new node_modules entry.  Add the target dir
+	// explicitly in case the search paths didn't include it before.
+	let tmpFreshPaths = pSearchPaths.indexOf(pTargetPkgDir) >= 0
+		? pSearchPaths
+		: [pTargetPkgDir].concat(pSearchPaths);
+	let tmpSharpAfter = resolveSharp(tmpFreshPaths);
+	if (!tmpSharpAfter && !pQuiet)
+	{
+		console.warn('Brand: retold-sharp installed but could not be resolved.  Skipping PNGs.');
+	}
+	return tmpSharpAfter;
+}
+
+async function writeFavicons(pBrand, pOutDir, pSearchPaths, pTargetPkgDir, pQuiet)
 {
 	libFs.mkdirSync(pOutDir, { recursive: true });
 
@@ -298,14 +404,12 @@ async function writeFavicons(pBrand, pOutDir, pSearchPaths, pQuiet)
 		tmpResults.push('favicon-light.svg', 'favicon-dark.svg');
 	}
 
-	let tmpSharp = resolveSharp(pSearchPaths);
-	if (!tmpSharp && !pQuiet)
-	{
-		console.warn('Warning: retold-sharp not available — skipping PNG raster sizes.');
-		console.warn('         Install retold-sharp to generate 16/32/48/64/180/192/512 PNGs:');
-		console.warn('             npm install retold-sharp');
-		console.warn('         The SVG favicon is sufficient for all modern browsers.');
-	}
+	// PNG raster output via retold-sharp.  On first run for a given app,
+	// ensureSharp installs retold-sharp into the consumer's devDependencies
+	// so subsequent `npm install` invocations pull it automatically — no
+	// per-app setup required by the developer.  Falls through to SVG-only
+	// when the install fails (rare; see ensureSharp comment for details).
+	let tmpSharp = ensureSharp(pSearchPaths, pTargetPkgDir, pQuiet);
 
 	if (tmpSharp)
 	{
@@ -402,14 +506,16 @@ async function main()
 	{
 		let tmpFaviconsDir = libPath.resolve(process.cwd(), tmpArgs.favicons);
 		// Search retold-sharp from CLI dir, target package dir, then cwd —
-		// any of those covers a sane install pattern.
+		// any of those covers a sane install pattern.  ensureSharp uses
+		// the target package dir to npm install --save-dev if absent.
+		let tmpTargetPkgDir = libPath.dirname(tmpPkgPath);
 		let tmpSearchPaths =
 		[
 			__dirname,
-			libPath.dirname(tmpPkgPath),
+			tmpTargetPkgDir,
 			process.cwd()
 		];
-		let tmpWritten = await writeFavicons(tmpBrand, tmpFaviconsDir, tmpSearchPaths, tmpArgs.quiet);
+		let tmpWritten = await writeFavicons(tmpBrand, tmpFaviconsDir, tmpSearchPaths, tmpTargetPkgDir, tmpArgs.quiet);
 		if (!tmpArgs.quiet)
 		{
 			console.log('Wrote ' + tmpWritten.length + ' favicon files to ' + tmpFaviconsDir);
