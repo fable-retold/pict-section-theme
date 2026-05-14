@@ -58,8 +58,14 @@ class ThemeRegistry
 			{ Hash: 'retold-mono',        Category: 'Default',  Bundle: require('./retold-mono.json') },
 
 			// App-extracted themes (named after their host app)
-			{ Hash: 'retold-manager',         Category: 'App',  Bundle: require('./retold-manager.json') },
-			{ Hash: 'retold-content-system',  Category: 'App',  Bundle: require('./retold-content-system.json') },
+			{ Hash: 'retold-manager',                Category: 'App',  Bundle: require('./retold-manager.json') },
+			{ Hash: 'retold-content-system',         Category: 'App',  Bundle: require('./retold-content-system.json') },
+			{ Hash: 'ultravisor-desert-dusk',        Category: 'App',  Bundle: require('./ultravisor-desert-dusk.json') },
+			{ Hash: 'ultravisor-desert-day',         Category: 'App',  Bundle: require('./ultravisor-desert-day.json') },
+			{ Hash: 'ultravisor-desert-sunset',      Category: 'App',  Bundle: require('./ultravisor-desert-sunset.json') },
+			{ Hash: 'ultravisor-professional-light', Category: 'App',  Bundle: require('./ultravisor-professional-light.json') },
+			{ Hash: 'ultravisor-professional-dark',  Category: 'App',  Bundle: require('./ultravisor-professional-dark.json') },
+			{ Hash: 'ultravisor-desert-canyon',      Category: 'App',  Bundle: require('./ultravisor-desert-canyon.json') },
 
 			// Playground / starter paired themes (have light/dark)
 			{ Hash: 'playground-corp',    Category: 'Paired',   Bundle: require('./playground-corp.json') },

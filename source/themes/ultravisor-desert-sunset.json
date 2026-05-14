@@ -1,0 +1,101 @@
+{
+	"Hash": "ultravisor-desert-sunset",
+	"Name": "Ultravisor — Desert Sunset",
+	"Version": "0.0.1",
+	"Description": "Ultravisor's golden-hour palette — orange brand on rust-warmed dark backgrounds. Single-mode dark.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "single",
+		"Default": "dark"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary":   "#1e1610",
+				"Secondary": "#2a2018",
+				"Tertiary":  "#342818",
+				"Panel":     "#2a2018",
+				"Hover":     "#3a2e22",
+				"Selected":  "#3a2e22"
+			},
+			"Text": {
+				"Primary":     "#d4c4aa",
+				"Secondary":   "#e0d0b8",
+				"Muted":       "#8a7560",
+				"Placeholder": "#6a5840",
+				"OnBrand":     "#1e1610"
+			},
+			"Brand": {
+				"Primary":      "#e8943a",
+				"PrimaryHover": "#f0a44a",
+				"Accent":       "#2a8a8a",
+				"AccentHover":  "#3a9a9a"
+			},
+			"Border": {
+				"Default": "#3a2e22",
+				"Light":   "#342818",
+				"Strong":  "#4a3e32"
+			},
+			"Status": {
+				"Success": "#6a9a3a",
+				"Warning": "#d4a46a",
+				"Error":   "#c44e2a",
+				"Info":    "#2a8a8a"
+			},
+			"Scrollbar": {
+				"Track": "#2a2018",
+				"Thumb": "#3a2e22",
+				"Hover": "#4a3e32"
+			},
+			"Selection": {
+				"Background": "#3a2e22",
+				"Text":       "#e0d0b8"
+			},
+			"Focus": {
+				"Outline": "#e8943a"
+			},
+			"Shadow": {
+				"Color": "rgba(0, 0, 0, 0.30)"
+			},
+			"Syntax": {
+				"Keyword":     "#E89A6E",
+				"String":      "#8FD493",
+				"Number":      "#E8A94D",
+				"Comment":     "#8E8478",
+				"Operator":    "#4FB3A6",
+				"Punctuation": "#C0B5A4",
+				"Function":    "#7FBDD8",
+				"Variable":    "#E8DCC8",
+				"Type":        "#E8A94D",
+				"Builtin":     "#E8A94D",
+				"Property":    "#E89A6E",
+				"Tag":         "#E89A6E",
+				"AttrName":    "#E8A94D",
+				"AttrValue":   "#8FD493"
+			},
+			"Editor": {
+				"LineNumberBackground": "#2a2018",
+				"LineNumberText":       "#6a5840",
+				"CurrentLineHighlight": "#342818",
+				"SelectionBackground":  "#3a2e22",
+				"GutterBorder":         "#342818"
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans":  "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+				"Serif": "Georgia, Cambria, 'Times New Roman', Times, serif",
+				"Mono":  "'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace"
+			}
+		},
+		"Layout": {
+			"SidebarWidth":    "260px",
+			"TopbarHeight":    "56px",
+			"StatusbarHeight": "28px"
+		}
+	},
+	"Brand": {
+		"Name": "Ultravisor",
+		"Tagline": "Process supervision and workflow automation"
+	}
+}
