@@ -1,0 +1,261 @@
+{
+	"Hash": "databeacon-beos",
+	"Name": "DataBeacon \u2014 BeOS",
+	"Version": "0.0.1",
+	"Description": "BeOS palette \u2014 cool teals with orange accents. Light: sky-blue desktop. Dark: deep ocean panels with cyan highlights.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "system",
+		"Default": "system"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary": {
+					"Light": "#e0e8ec",
+					"Dark": "#0a1a22"
+				},
+				"Secondary": {
+					"Light": "#c8d6de",
+					"Dark": "#102530"
+				},
+				"Tertiary": {
+					"Light": "#d4dfe5",
+					"Dark": "#0d1f29"
+				},
+				"Panel": {
+					"Light": "#f0f4f6",
+					"Dark": "#142430"
+				},
+				"Input": {
+					"Light": "#ffffff",
+					"Dark": "#1b313f"
+				},
+				"Hover": {
+					"Light": "#d7dee2",
+					"Dark": "#091820"
+				},
+				"Selected": {
+					"Light": "#c2d4da",
+					"Dark": "#19353e"
+				}
+			},
+			"Text": {
+				"Primary": {
+					"Light": "#101820",
+					"Dark": "#b0d0e0"
+				},
+				"Secondary": {
+					"Light": "#40525e",
+					"Dark": "#7a98a8"
+				},
+				"Muted": {
+					"Light": "#6e828e",
+					"Dark": "#556a78"
+				},
+				"Placeholder": {
+					"Light": "#95a5ae",
+					"Dark": "#3a4e59"
+				},
+				"OnBrand": {
+					"Light": "#ffffff",
+					"Dark": "#0a1a22"
+				}
+			},
+			"Brand": {
+				"Primary": {
+					"Light": "#3a7a8a",
+					"Dark": "#60b0c0"
+				},
+				"PrimaryHover": {
+					"Light": "#4e98aa",
+					"Dark": "#80ccdc"
+				},
+				"Accent": {
+					"Light": "#3a7a8a",
+					"Dark": "#60b0c0"
+				},
+				"AccentHover": {
+					"Light": "#4e98aa",
+					"Dark": "#80ccdc"
+				}
+			},
+			"Border": {
+				"Default": {
+					"Light": "#8ba3b0",
+					"Dark": "#466070"
+				},
+				"Light": {
+					"Light": "#b5c5ce",
+					"Dark": "#283d49"
+				},
+				"Strong": {
+					"Light": "#6f828c",
+					"Dark": "#384c59"
+				}
+			},
+			"Status": {
+				"Success": {
+					"Light": "#2a7a4a",
+					"Dark": "#4ac06a"
+				},
+				"Warning": {
+					"Light": "#cc9930",
+					"Dark": "#ffc860"
+				},
+				"Error": {
+					"Light": "#cc5530",
+					"Dark": "#ff8060"
+				},
+				"Info": {
+					"Light": "#3a7a8a",
+					"Dark": "#60b0c0"
+				}
+			},
+			"Scrollbar": {
+				"Track": {
+					"Light": "#c8d6de",
+					"Dark": "#102530"
+				},
+				"Thumb": {
+					"Light": "#7c929f",
+					"Dark": "#4d6574"
+				},
+				"Hover": {
+					"Light": "#6e828e",
+					"Dark": "#556a78"
+				}
+			},
+			"Selection": {
+				"Background": {
+					"Light": "#aac4cc",
+					"Dark": "#254a54"
+				},
+				"Text": {
+					"Light": "#101820",
+					"Dark": "#b0d0e0"
+				}
+			},
+			"Focus": {
+				"Outline": {
+					"Light": "#3a7a8a",
+					"Dark": "#60b0c0"
+				}
+			},
+			"Shadow": {
+				"Color": {
+					"Light": "rgba(0, 0, 0, 0.12)",
+					"Dark": "rgba(0, 0, 0, 0.55)"
+				}
+			},
+			"Syntax": {
+				"Keyword": {
+					"Light": "#cc5530",
+					"Dark": "#ff8060"
+				},
+				"String": {
+					"Light": "#2a7a4a",
+					"Dark": "#4ac06a"
+				},
+				"Number": {
+					"Light": "#cc9930",
+					"Dark": "#ffc860"
+				},
+				"Comment": {
+					"Light": "#6e828e",
+					"Dark": "#556a78"
+				},
+				"Operator": {
+					"Light": "#3a7a8a",
+					"Dark": "#60b0c0"
+				},
+				"Punctuation": {
+					"Light": "#40525e",
+					"Dark": "#7a98a8"
+				},
+				"Function": {
+					"Light": "#3a7a8a",
+					"Dark": "#60b0c0"
+				},
+				"Variable": {
+					"Light": "#101820",
+					"Dark": "#b0d0e0"
+				},
+				"Type": {
+					"Light": "#cc9930",
+					"Dark": "#ffc860"
+				},
+				"Builtin": {
+					"Light": "#cc9930",
+					"Dark": "#ffc860"
+				},
+				"Property": {
+					"Light": "#cc5530",
+					"Dark": "#ff8060"
+				},
+				"Tag": {
+					"Light": "#cc5530",
+					"Dark": "#ff8060"
+				},
+				"AttrName": {
+					"Light": "#cc9930",
+					"Dark": "#ffc860"
+				},
+				"AttrValue": {
+					"Light": "#2a7a4a",
+					"Dark": "#4ac06a"
+				}
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+				"Serif": "Georgia, Cambria, 'Times New Roman', Times, serif",
+				"Mono": "'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace"
+			},
+			"Size": {
+				"XS": "0.75rem",
+				"SM": "0.875rem",
+				"MD": "1rem",
+				"LG": "1.125rem",
+				"XL": "1.375rem",
+				"XXL": "1.75rem"
+			},
+			"Weight": {
+				"Regular": "400",
+				"Medium": "500",
+				"Bold": "700"
+			},
+			"LineHeight": {
+				"Tight": "1.2",
+				"Normal": "1.5",
+				"Loose": "1.7"
+			}
+		},
+		"Spacing": {
+			"XS": "4px",
+			"SM": "8px",
+			"MD": "12px",
+			"LG": "16px",
+			"XL": "24px",
+			"XXL": "32px"
+		},
+		"Radius": {
+			"None": "0",
+			"SM": "2px",
+			"MD": "4px",
+			"LG": "8px",
+			"XL": "12px",
+			"Pill": "999px"
+		},
+		"Layout": {
+			"SidebarWidth": "220px",
+			"TopbarHeight": "48px",
+			"StatusbarHeight": "28px"
+		}
+	},
+	"Brand": {
+		"Name": "BeOS",
+		"Tagline": "Connect, introspect, and expose remote databases"
+	}
+}

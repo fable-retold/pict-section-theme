@@ -1,0 +1,261 @@
+{
+	"Hash": "databeacon-next",
+	"Name": "DataBeacon \u2014 NeXT",
+	"Version": "0.0.1",
+	"Description": "NeXTSTEP palette \u2014 stone backgrounds with rich purple accents. Light: warm stone. Dark: deep aubergine with lavender highlights.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "system",
+		"Default": "system"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary": {
+					"Light": "#e8e6dd",
+					"Dark": "#1a1420"
+				},
+				"Secondary": {
+					"Light": "#d6d3c8",
+					"Dark": "#221a2c"
+				},
+				"Tertiary": {
+					"Light": "#dfdcd2",
+					"Dark": "#1e1726"
+				},
+				"Panel": {
+					"Light": "#f5f3ed",
+					"Dark": "#251c2e"
+				},
+				"Input": {
+					"Light": "#ffffff",
+					"Dark": "#2f253a"
+				},
+				"Hover": {
+					"Light": "#dedcd4",
+					"Dark": "#18131e"
+				},
+				"Selected": {
+					"Light": "#d1c7d2",
+					"Dark": "#352a42"
+				}
+			},
+			"Text": {
+				"Primary": {
+					"Light": "#1e1a26",
+					"Dark": "#e8e6dd"
+				},
+				"Secondary": {
+					"Light": "#4c465a",
+					"Dark": "#b8b4c6"
+				},
+				"Muted": {
+					"Light": "#7a7488",
+					"Dark": "#7a7488"
+				},
+				"Placeholder": {
+					"Light": "#a09ba5",
+					"Dark": "#585263"
+				},
+				"OnBrand": {
+					"Light": "#ffffff",
+					"Dark": "#1a1420"
+				}
+			},
+			"Brand": {
+				"Primary": {
+					"Light": "#6a3fa0",
+					"Dark": "#b090e0"
+				},
+				"PrimaryHover": {
+					"Light": "#8557c0",
+					"Dark": "#c8aef0"
+				},
+				"Accent": {
+					"Light": "#6a3fa0",
+					"Dark": "#b090e0"
+				},
+				"AccentHover": {
+					"Light": "#8557c0",
+					"Dark": "#c8aef0"
+				}
+			},
+			"Border": {
+				"Default": {
+					"Light": "#9a96a6",
+					"Dark": "#5e5468"
+				},
+				"Light": {
+					"Light": "#c1bec1",
+					"Dark": "#3c3444"
+				},
+				"Strong": {
+					"Light": "#7b7884",
+					"Dark": "#4b4353"
+				}
+			},
+			"Status": {
+				"Success": {
+					"Light": "#3a7a3a",
+					"Dark": "#7acc7a"
+				},
+				"Warning": {
+					"Light": "#b88a00",
+					"Dark": "#ffcf4a"
+				},
+				"Error": {
+					"Light": "#aa2c3a",
+					"Dark": "#ff6a80"
+				},
+				"Info": {
+					"Light": "#6a3fa0",
+					"Dark": "#b090e0"
+				}
+			},
+			"Scrollbar": {
+				"Track": {
+					"Light": "#d6d3c8",
+					"Dark": "#221a2c"
+				},
+				"Thumb": {
+					"Light": "#8a8597",
+					"Dark": "#6c6478"
+				},
+				"Hover": {
+					"Light": "#7a7488",
+					"Dark": "#7a7488"
+				}
+			},
+			"Selection": {
+				"Background": {
+					"Light": "#bfb0c9",
+					"Dark": "#4a3b5d"
+				},
+				"Text": {
+					"Light": "#1e1a26",
+					"Dark": "#e8e6dd"
+				}
+			},
+			"Focus": {
+				"Outline": {
+					"Light": "#6a3fa0",
+					"Dark": "#b090e0"
+				}
+			},
+			"Shadow": {
+				"Color": {
+					"Light": "rgba(0, 0, 0, 0.12)",
+					"Dark": "rgba(0, 0, 0, 0.55)"
+				}
+			},
+			"Syntax": {
+				"Keyword": {
+					"Light": "#aa2c3a",
+					"Dark": "#ff6a80"
+				},
+				"String": {
+					"Light": "#3a7a3a",
+					"Dark": "#7acc7a"
+				},
+				"Number": {
+					"Light": "#b88a00",
+					"Dark": "#ffcf4a"
+				},
+				"Comment": {
+					"Light": "#7a7488",
+					"Dark": "#7a7488"
+				},
+				"Operator": {
+					"Light": "#6a3fa0",
+					"Dark": "#b090e0"
+				},
+				"Punctuation": {
+					"Light": "#4c465a",
+					"Dark": "#b8b4c6"
+				},
+				"Function": {
+					"Light": "#6a3fa0",
+					"Dark": "#b090e0"
+				},
+				"Variable": {
+					"Light": "#1e1a26",
+					"Dark": "#e8e6dd"
+				},
+				"Type": {
+					"Light": "#b88a00",
+					"Dark": "#ffcf4a"
+				},
+				"Builtin": {
+					"Light": "#b88a00",
+					"Dark": "#ffcf4a"
+				},
+				"Property": {
+					"Light": "#aa2c3a",
+					"Dark": "#ff6a80"
+				},
+				"Tag": {
+					"Light": "#aa2c3a",
+					"Dark": "#ff6a80"
+				},
+				"AttrName": {
+					"Light": "#b88a00",
+					"Dark": "#ffcf4a"
+				},
+				"AttrValue": {
+					"Light": "#3a7a3a",
+					"Dark": "#7acc7a"
+				}
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+				"Serif": "Georgia, Cambria, 'Times New Roman', Times, serif",
+				"Mono": "'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace"
+			},
+			"Size": {
+				"XS": "0.75rem",
+				"SM": "0.875rem",
+				"MD": "1rem",
+				"LG": "1.125rem",
+				"XL": "1.375rem",
+				"XXL": "1.75rem"
+			},
+			"Weight": {
+				"Regular": "400",
+				"Medium": "500",
+				"Bold": "700"
+			},
+			"LineHeight": {
+				"Tight": "1.2",
+				"Normal": "1.5",
+				"Loose": "1.7"
+			}
+		},
+		"Spacing": {
+			"XS": "4px",
+			"SM": "8px",
+			"MD": "12px",
+			"LG": "16px",
+			"XL": "24px",
+			"XXL": "32px"
+		},
+		"Radius": {
+			"None": "0",
+			"SM": "2px",
+			"MD": "4px",
+			"LG": "8px",
+			"XL": "12px",
+			"Pill": "999px"
+		},
+		"Layout": {
+			"SidebarWidth": "220px",
+			"TopbarHeight": "48px",
+			"StatusbarHeight": "28px"
+		}
+	},
+	"Brand": {
+		"Name": "NeXT",
+		"Tagline": "Connect, introspect, and expose remote databases"
+	}
+}

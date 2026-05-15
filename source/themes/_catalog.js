@@ -90,6 +90,14 @@ class ThemeRegistry
 			{ Hash: '1990s-website',      Category: 'Fun',      Bundle: require('./1990s-website.json') },
 			{ Hash: 'early-2000s',        Category: 'Fun',      Bundle: require('./early-2000s.json') },
 
+			// Retro workstation palettes — extracted from retold-databeacon's
+			// original built-in theme set; period-platform-themed pairs.
+			{ Hash: 'databeacon-nineteen-97', Category: 'Retro', Bundle: require('./databeacon-nineteen-97.json') },
+			{ Hash: 'databeacon-mac-classic', Category: 'Retro', Bundle: require('./databeacon-mac-classic.json') },
+			{ Hash: 'databeacon-next',        Category: 'Retro', Bundle: require('./databeacon-next.json') },
+			{ Hash: 'databeacon-beos',        Category: 'Retro', Bundle: require('./databeacon-beos.json') },
+			{ Hash: 'databeacon-sgi',         Category: 'Retro', Bundle: require('./databeacon-sgi.json') },
+
 			// Diagnostics / utility
 			{ Hash: 'mobile-debug',       Category: 'Debug',    Bundle: require('./mobile-debug.json') }
 		];

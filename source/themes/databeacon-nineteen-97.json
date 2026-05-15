@@ -1,0 +1,261 @@
+{
+	"Hash": "databeacon-nineteen-97",
+	"Name": "DataBeacon \u2014 1997 (Win95/98)",
+	"Version": "0.0.1",
+	"Description": "Windows 95/98 retro palette \u2014 beige + navy + maroon. Light: classic Win95 desktop. Dark: indigo-grey background with sky/coral accents.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "system",
+		"Default": "system"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary": {
+					"Light": "#ece9d8",
+					"Dark": "#1e1e2e"
+				},
+				"Secondary": {
+					"Light": "#d8d3b8",
+					"Dark": "#26263a"
+				},
+				"Tertiary": {
+					"Light": "#e2dec8",
+					"Dark": "#222234"
+				},
+				"Panel": {
+					"Light": "#fffbf0",
+					"Dark": "#2a2a3a"
+				},
+				"Input": {
+					"Light": "#ffffff",
+					"Dark": "#343450"
+				},
+				"Hover": {
+					"Light": "#e2dfcf",
+					"Dark": "#1c1c2c"
+				},
+				"Selected": {
+					"Light": "#c1bfc8",
+					"Dark": "#2f3553"
+				}
+			},
+			"Text": {
+				"Primary": {
+					"Light": "#1a1a1a",
+					"Dark": "#ece9d8"
+				},
+				"Secondary": {
+					"Light": "#4a4a4a",
+					"Dark": "#b8b6a8"
+				},
+				"Muted": {
+					"Light": "#7a7a7a",
+					"Dark": "#7e7c70"
+				},
+				"Placeholder": {
+					"Light": "#a1a09a",
+					"Dark": "#5c5b58"
+				},
+				"OnBrand": {
+					"Light": "#ffffff",
+					"Dark": "#1a1a1a"
+				}
+			},
+			"Brand": {
+				"Primary": {
+					"Light": "#000080",
+					"Dark": "#80a0ff"
+				},
+				"PrimaryHover": {
+					"Light": "#0000cc",
+					"Dark": "#a0b8ff"
+				},
+				"Accent": {
+					"Light": "#000080",
+					"Dark": "#80a0ff"
+				},
+				"AccentHover": {
+					"Light": "#0000cc",
+					"Dark": "#a0b8ff"
+				}
+			},
+			"Border": {
+				"Default": {
+					"Light": "#808080",
+					"Dark": "#4e4e68"
+				},
+				"Light": {
+					"Light": "#b6b4ac",
+					"Dark": "#36364b"
+				},
+				"Strong": {
+					"Light": "#666666",
+					"Dark": "#3e3e53"
+				}
+			},
+			"Status": {
+				"Success": {
+					"Light": "#008000",
+					"Dark": "#80ff80"
+				},
+				"Warning": {
+					"Light": "#808000",
+					"Dark": "#ffcc00"
+				},
+				"Error": {
+					"Light": "#800000",
+					"Dark": "#ff8080"
+				},
+				"Info": {
+					"Light": "#000080",
+					"Dark": "#80c0ff"
+				}
+			},
+			"Scrollbar": {
+				"Track": {
+					"Light": "#d8d3b8",
+					"Dark": "#26263a"
+				},
+				"Thumb": {
+					"Light": "#7d7d7d",
+					"Dark": "#66656c"
+				},
+				"Hover": {
+					"Light": "#7a7a7a",
+					"Dark": "#7e7c70"
+				}
+			},
+			"Selection": {
+				"Background": {
+					"Light": "#a09ebb",
+					"Dark": "#3d4770"
+				},
+				"Text": {
+					"Light": "#1a1a1a",
+					"Dark": "#ece9d8"
+				}
+			},
+			"Focus": {
+				"Outline": {
+					"Light": "#000080",
+					"Dark": "#80a0ff"
+				}
+			},
+			"Shadow": {
+				"Color": {
+					"Light": "rgba(0, 0, 0, 0.12)",
+					"Dark": "rgba(0, 0, 0, 0.55)"
+				}
+			},
+			"Syntax": {
+				"Keyword": {
+					"Light": "#800000",
+					"Dark": "#ff8080"
+				},
+				"String": {
+					"Light": "#008000",
+					"Dark": "#80ff80"
+				},
+				"Number": {
+					"Light": "#808000",
+					"Dark": "#ffcc00"
+				},
+				"Comment": {
+					"Light": "#7a7a7a",
+					"Dark": "#7e7c70"
+				},
+				"Operator": {
+					"Light": "#000080",
+					"Dark": "#80a0ff"
+				},
+				"Punctuation": {
+					"Light": "#4a4a4a",
+					"Dark": "#b8b6a8"
+				},
+				"Function": {
+					"Light": "#000080",
+					"Dark": "#80c0ff"
+				},
+				"Variable": {
+					"Light": "#1a1a1a",
+					"Dark": "#ece9d8"
+				},
+				"Type": {
+					"Light": "#808000",
+					"Dark": "#ffcc00"
+				},
+				"Builtin": {
+					"Light": "#808000",
+					"Dark": "#ffcc00"
+				},
+				"Property": {
+					"Light": "#800000",
+					"Dark": "#ff8080"
+				},
+				"Tag": {
+					"Light": "#800000",
+					"Dark": "#ff8080"
+				},
+				"AttrName": {
+					"Light": "#808000",
+					"Dark": "#ffcc00"
+				},
+				"AttrValue": {
+					"Light": "#008000",
+					"Dark": "#80ff80"
+				}
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+				"Serif": "Georgia, Cambria, 'Times New Roman', Times, serif",
+				"Mono": "'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace"
+			},
+			"Size": {
+				"XS": "0.75rem",
+				"SM": "0.875rem",
+				"MD": "1rem",
+				"LG": "1.125rem",
+				"XL": "1.375rem",
+				"XXL": "1.75rem"
+			},
+			"Weight": {
+				"Regular": "400",
+				"Medium": "500",
+				"Bold": "700"
+			},
+			"LineHeight": {
+				"Tight": "1.2",
+				"Normal": "1.5",
+				"Loose": "1.7"
+			}
+		},
+		"Spacing": {
+			"XS": "4px",
+			"SM": "8px",
+			"MD": "12px",
+			"LG": "16px",
+			"XL": "24px",
+			"XXL": "32px"
+		},
+		"Radius": {
+			"None": "0",
+			"SM": "2px",
+			"MD": "4px",
+			"LG": "8px",
+			"XL": "12px",
+			"Pill": "999px"
+		},
+		"Layout": {
+			"SidebarWidth": "220px",
+			"TopbarHeight": "48px",
+			"StatusbarHeight": "28px"
+		}
+	},
+	"Brand": {
+		"Name": "1997 (Win95/98)",
+		"Tagline": "Connect, introspect, and expose remote databases"
+	}
+}

@@ -1,0 +1,261 @@
+{
+	"Hash": "databeacon-sgi",
+	"Name": "DataBeacon \u2014 SGI",
+	"Version": "0.0.1",
+	"Description": "SGI Indy / IRIX palette \u2014 magenta with cyan highlights. Light: signature SGI grey. Dark: deep workstation black with the same hot magenta.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "system",
+		"Default": "system"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary": {
+					"Light": "#c8c8c8",
+					"Dark": "#1a1a1a"
+				},
+				"Secondary": {
+					"Light": "#b8b8b8",
+					"Dark": "#232323"
+				},
+				"Tertiary": {
+					"Light": "#c0c0c0",
+					"Dark": "#1e1e1e"
+				},
+				"Panel": {
+					"Light": "#dcdcdc",
+					"Dark": "#252525"
+				},
+				"Input": {
+					"Light": "#ffffff",
+					"Dark": "#2e2e2e"
+				},
+				"Hover": {
+					"Light": "#c0c0c0",
+					"Dark": "#181818"
+				},
+				"Selected": {
+					"Light": "#c8a9bb",
+					"Dark": "#432635"
+				}
+			},
+			"Text": {
+				"Primary": {
+					"Light": "#202020",
+					"Dark": "#e0e0e0"
+				},
+				"Secondary": {
+					"Light": "#4a4a4a",
+					"Dark": "#a8a8a8"
+				},
+				"Muted": {
+					"Light": "#6e6e6e",
+					"Dark": "#707070"
+				},
+				"Placeholder": {
+					"Light": "#8d8d8d",
+					"Dark": "#515151"
+				},
+				"OnBrand": {
+					"Light": "#ffffff",
+					"Dark": "#0a0a0a"
+				}
+			},
+			"Brand": {
+				"Primary": {
+					"Light": "#c82080",
+					"Dark": "#ff60b0"
+				},
+				"PrimaryHover": {
+					"Light": "#e040a0",
+					"Dark": "#ff80c8"
+				},
+				"Accent": {
+					"Light": "#c82080",
+					"Dark": "#ff60b0"
+				},
+				"AccentHover": {
+					"Light": "#e040a0",
+					"Dark": "#ff80c8"
+				}
+			},
+			"Border": {
+				"Default": {
+					"Light": "#808080",
+					"Dark": "#505050"
+				},
+				"Light": {
+					"Light": "#a4a4a4",
+					"Dark": "#353535"
+				},
+				"Strong": {
+					"Light": "#666666",
+					"Dark": "#404040"
+				}
+			},
+			"Status": {
+				"Success": {
+					"Light": "#208040",
+					"Dark": "#50d080"
+				},
+				"Warning": {
+					"Light": "#e8a818",
+					"Dark": "#ffd050"
+				},
+				"Error": {
+					"Light": "#e83018",
+					"Dark": "#ff6060"
+				},
+				"Info": {
+					"Light": "#3080c0",
+					"Dark": "#60c0ff"
+				}
+			},
+			"Scrollbar": {
+				"Track": {
+					"Light": "#b8b8b8",
+					"Dark": "#232323"
+				},
+				"Thumb": {
+					"Light": "#777777",
+					"Dark": "#606060"
+				},
+				"Hover": {
+					"Light": "#6e6e6e",
+					"Dark": "#707070"
+				}
+			},
+			"Selection": {
+				"Background": {
+					"Light": "#c892b0",
+					"Dark": "#63304a"
+				},
+				"Text": {
+					"Light": "#202020",
+					"Dark": "#e0e0e0"
+				}
+			},
+			"Focus": {
+				"Outline": {
+					"Light": "#c82080",
+					"Dark": "#ff60b0"
+				}
+			},
+			"Shadow": {
+				"Color": {
+					"Light": "rgba(0, 0, 0, 0.12)",
+					"Dark": "rgba(0, 0, 0, 0.55)"
+				}
+			},
+			"Syntax": {
+				"Keyword": {
+					"Light": "#e83018",
+					"Dark": "#ff6060"
+				},
+				"String": {
+					"Light": "#208040",
+					"Dark": "#50d080"
+				},
+				"Number": {
+					"Light": "#e8a818",
+					"Dark": "#ffd050"
+				},
+				"Comment": {
+					"Light": "#6e6e6e",
+					"Dark": "#707070"
+				},
+				"Operator": {
+					"Light": "#c82080",
+					"Dark": "#ff60b0"
+				},
+				"Punctuation": {
+					"Light": "#4a4a4a",
+					"Dark": "#a8a8a8"
+				},
+				"Function": {
+					"Light": "#3080c0",
+					"Dark": "#60c0ff"
+				},
+				"Variable": {
+					"Light": "#202020",
+					"Dark": "#e0e0e0"
+				},
+				"Type": {
+					"Light": "#e8a818",
+					"Dark": "#ffd050"
+				},
+				"Builtin": {
+					"Light": "#e8a818",
+					"Dark": "#ffd050"
+				},
+				"Property": {
+					"Light": "#e83018",
+					"Dark": "#ff6060"
+				},
+				"Tag": {
+					"Light": "#e83018",
+					"Dark": "#ff6060"
+				},
+				"AttrName": {
+					"Light": "#e8a818",
+					"Dark": "#ffd050"
+				},
+				"AttrValue": {
+					"Light": "#208040",
+					"Dark": "#50d080"
+				}
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+				"Serif": "Georgia, Cambria, 'Times New Roman', Times, serif",
+				"Mono": "'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace"
+			},
+			"Size": {
+				"XS": "0.75rem",
+				"SM": "0.875rem",
+				"MD": "1rem",
+				"LG": "1.125rem",
+				"XL": "1.375rem",
+				"XXL": "1.75rem"
+			},
+			"Weight": {
+				"Regular": "400",
+				"Medium": "500",
+				"Bold": "700"
+			},
+			"LineHeight": {
+				"Tight": "1.2",
+				"Normal": "1.5",
+				"Loose": "1.7"
+			}
+		},
+		"Spacing": {
+			"XS": "4px",
+			"SM": "8px",
+			"MD": "12px",
+			"LG": "16px",
+			"XL": "24px",
+			"XXL": "32px"
+		},
+		"Radius": {
+			"None": "0",
+			"SM": "2px",
+			"MD": "4px",
+			"LG": "8px",
+			"XL": "12px",
+			"Pill": "999px"
+		},
+		"Layout": {
+			"SidebarWidth": "220px",
+			"TopbarHeight": "48px",
+			"StatusbarHeight": "28px"
+		}
+	},
+	"Brand": {
+		"Name": "SGI",
+		"Tagline": "Connect, introspect, and expose remote databases"
+	}
+}

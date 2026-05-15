@@ -1,0 +1,261 @@
+{
+	"Hash": "databeacon-mac-classic",
+	"Name": "DataBeacon \u2014 Mac Classic",
+	"Version": "0.0.1",
+	"Description": "Mac OS 8/9 Platinum palette \u2014 soft greys with sky blue accents. Light: classic Mac platinum. Dark: charcoal panels with the same blue accent family.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "system",
+		"Default": "system"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary": {
+					"Light": "#dddddd",
+					"Dark": "#202020"
+				},
+				"Secondary": {
+					"Light": "#cccccc",
+					"Dark": "#2a2a2a"
+				},
+				"Tertiary": {
+					"Light": "#d4d4d4",
+					"Dark": "#252525"
+				},
+				"Panel": {
+					"Light": "#f0f0f0",
+					"Dark": "#2e2e2e"
+				},
+				"Input": {
+					"Light": "#ffffff",
+					"Dark": "#3a3a3a"
+				},
+				"Hover": {
+					"Light": "#d4d4d4",
+					"Dark": "#1e1e1e"
+				},
+				"Selected": {
+					"Light": "#c0cce3",
+					"Dark": "#2b3748"
+				}
+			},
+			"Text": {
+				"Primary": {
+					"Light": "#000000",
+					"Dark": "#dddddd"
+				},
+				"Secondary": {
+					"Light": "#444444",
+					"Dark": "#b0b0b0"
+				},
+				"Muted": {
+					"Light": "#777777",
+					"Dark": "#777777"
+				},
+				"Placeholder": {
+					"Light": "#9a9a9a",
+					"Dark": "#585858"
+				},
+				"OnBrand": {
+					"Light": "#ffffff",
+					"Dark": "#0a0a0a"
+				}
+			},
+			"Brand": {
+				"Primary": {
+					"Light": "#4080ff",
+					"Dark": "#60a0ff"
+				},
+				"PrimaryHover": {
+					"Light": "#60a0ff",
+					"Dark": "#80b8ff"
+				},
+				"Accent": {
+					"Light": "#4080ff",
+					"Dark": "#60a0ff"
+				},
+				"AccentHover": {
+					"Light": "#60a0ff",
+					"Dark": "#80b8ff"
+				}
+			},
+			"Border": {
+				"Default": {
+					"Light": "#999999",
+					"Dark": "#555555"
+				},
+				"Light": {
+					"Light": "#bbbbbb",
+					"Dark": "#3a3a3a"
+				},
+				"Strong": {
+					"Light": "#7a7a7a",
+					"Dark": "#444444"
+				}
+			},
+			"Status": {
+				"Success": {
+					"Light": "#339933",
+					"Dark": "#60cc60"
+				},
+				"Warning": {
+					"Light": "#cc6600",
+					"Dark": "#ff9933"
+				},
+				"Error": {
+					"Light": "#cc0000",
+					"Dark": "#ff4060"
+				},
+				"Info": {
+					"Light": "#4080ff",
+					"Dark": "#60a0ff"
+				}
+			},
+			"Scrollbar": {
+				"Track": {
+					"Light": "#cccccc",
+					"Dark": "#2a2a2a"
+				},
+				"Thumb": {
+					"Light": "#888888",
+					"Dark": "#666666"
+				},
+				"Hover": {
+					"Light": "#777777",
+					"Dark": "#777777"
+				}
+			},
+			"Selection": {
+				"Background": {
+					"Light": "#aabfe7",
+					"Dark": "#344867"
+				},
+				"Text": {
+					"Light": "#000000",
+					"Dark": "#dddddd"
+				}
+			},
+			"Focus": {
+				"Outline": {
+					"Light": "#4080ff",
+					"Dark": "#60a0ff"
+				}
+			},
+			"Shadow": {
+				"Color": {
+					"Light": "rgba(0, 0, 0, 0.12)",
+					"Dark": "rgba(0, 0, 0, 0.55)"
+				}
+			},
+			"Syntax": {
+				"Keyword": {
+					"Light": "#cc0000",
+					"Dark": "#ff4060"
+				},
+				"String": {
+					"Light": "#339933",
+					"Dark": "#60cc60"
+				},
+				"Number": {
+					"Light": "#cc6600",
+					"Dark": "#ff9933"
+				},
+				"Comment": {
+					"Light": "#777777",
+					"Dark": "#777777"
+				},
+				"Operator": {
+					"Light": "#4080ff",
+					"Dark": "#60a0ff"
+				},
+				"Punctuation": {
+					"Light": "#444444",
+					"Dark": "#b0b0b0"
+				},
+				"Function": {
+					"Light": "#4080ff",
+					"Dark": "#60a0ff"
+				},
+				"Variable": {
+					"Light": "#000000",
+					"Dark": "#dddddd"
+				},
+				"Type": {
+					"Light": "#cc6600",
+					"Dark": "#ff9933"
+				},
+				"Builtin": {
+					"Light": "#cc6600",
+					"Dark": "#ff9933"
+				},
+				"Property": {
+					"Light": "#cc0000",
+					"Dark": "#ff4060"
+				},
+				"Tag": {
+					"Light": "#cc0000",
+					"Dark": "#ff4060"
+				},
+				"AttrName": {
+					"Light": "#cc6600",
+					"Dark": "#ff9933"
+				},
+				"AttrValue": {
+					"Light": "#339933",
+					"Dark": "#60cc60"
+				}
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+				"Serif": "Georgia, Cambria, 'Times New Roman', Times, serif",
+				"Mono": "'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace"
+			},
+			"Size": {
+				"XS": "0.75rem",
+				"SM": "0.875rem",
+				"MD": "1rem",
+				"LG": "1.125rem",
+				"XL": "1.375rem",
+				"XXL": "1.75rem"
+			},
+			"Weight": {
+				"Regular": "400",
+				"Medium": "500",
+				"Bold": "700"
+			},
+			"LineHeight": {
+				"Tight": "1.2",
+				"Normal": "1.5",
+				"Loose": "1.7"
+			}
+		},
+		"Spacing": {
+			"XS": "4px",
+			"SM": "8px",
+			"MD": "12px",
+			"LG": "16px",
+			"XL": "24px",
+			"XXL": "32px"
+		},
+		"Radius": {
+			"None": "0",
+			"SM": "2px",
+			"MD": "4px",
+			"LG": "8px",
+			"XL": "12px",
+			"Pill": "999px"
+		},
+		"Layout": {
+			"SidebarWidth": "220px",
+			"TopbarHeight": "48px",
+			"StatusbarHeight": "28px"
+		}
+	},
+	"Brand": {
+		"Name": "Mac Classic",
+		"Tagline": "Connect, introspect, and expose remote databases"
+	}
+}
