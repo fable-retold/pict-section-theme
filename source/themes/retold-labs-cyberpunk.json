@@ -1,0 +1,261 @@
+{
+	"Hash": "retold-labs-cyberpunk",
+	"Name": "Retold Labs Cyberpunk",
+	"Version": "0.0.1",
+	"Description": "retold-labs’ neon \"cyberpunk\" identity — cyan/magenta on near-black (dark) or violet on light. Preserves the original cyberpunk-light / cyberpunk-dark palettes verbatim.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "system",
+		"Default": "system"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary": {
+					"Light": "#eae8f0",
+					"Dark": "#0a0a12"
+				},
+				"Secondary": {
+					"Light": "#ddd8ea",
+					"Dark": "#12101e"
+				},
+				"Tertiary": {
+					"Light": "#ddd8ea",
+					"Dark": "#12101e"
+				},
+				"Panel": {
+					"Light": "#f4f2fa",
+					"Dark": "#1a1628"
+				},
+				"Sidebar": {
+					"Light": "#1e1430",
+					"Dark": "#06060e"
+				},
+				"Hover": {
+					"Light": "rgba(130, 0, 200, 0.06)",
+					"Dark": "rgba(0, 255, 255, 0.08)"
+				},
+				"Selected": {
+					"Light": "rgba(138, 0, 212, 0.10)",
+					"Dark": "rgba(0, 229, 255, 0.12)"
+				}
+			},
+			"Text": {
+				"Primary": {
+					"Light": "#1a1028",
+					"Dark": "#e8e0f0"
+				},
+				"Secondary": {
+					"Light": "#4a3868",
+					"Dark": "#b0a8c8"
+				},
+				"Muted": {
+					"Light": "#7a6a98",
+					"Dark": "#6a6488"
+				},
+				"Placeholder": {
+					"Light": "#7a6a98",
+					"Dark": "#6a6488"
+				},
+				"OnBrand": {
+					"Light": "#d0c8e0",
+					"Dark": "#d0c8e0"
+				}
+			},
+			"Brand": {
+				"Primary": {
+					"Light": "#8a00d4",
+					"Dark": "#00e5ff"
+				},
+				"PrimaryHover": {
+					"Light": "#b040f0",
+					"Dark": "#60f0ff"
+				},
+				"Accent": {
+					"Light": "#8a00d4",
+					"Dark": "#00e5ff"
+				},
+				"AccentHover": {
+					"Light": "#b040f0",
+					"Dark": "#60f0ff"
+				}
+			},
+			"Border": {
+				"Default": {
+					"Light": "#c8c0d8",
+					"Dark": "#2a2440"
+				},
+				"Light": {
+					"Light": "#c8c0d8",
+					"Dark": "#2a2440"
+				},
+				"Strong": {
+					"Light": "#2a2040",
+					"Dark": "#1a1430"
+				}
+			},
+			"Status": {
+				"Success": {
+					"Light": "#00a050",
+					"Dark": "#39ff14"
+				},
+				"Warning": {
+					"Light": "#d41878",
+					"Dark": "#ff2ec4"
+				},
+				"Error": {
+					"Light": "#c82050",
+					"Dark": "#ff3860"
+				},
+				"Info": {
+					"Light": "#8a00d4",
+					"Dark": "#00e5ff"
+				}
+			},
+			"Scrollbar": {
+				"Track": {
+					"Light": "#ddd8ea",
+					"Dark": "#12101e"
+				},
+				"Thumb": {
+					"Light": "#c8c0d8",
+					"Dark": "#2a2440"
+				},
+				"Hover": {
+					"Light": "#7a6a98",
+					"Dark": "#6a6488"
+				}
+			},
+			"Selection": {
+				"Background": {
+					"Light": "rgba(138, 0, 212, 0.10)",
+					"Dark": "rgba(0, 229, 255, 0.12)"
+				},
+				"Text": {
+					"Light": "#1a1028",
+					"Dark": "#e8e0f0"
+				}
+			},
+			"Focus": {
+				"Outline": {
+					"Light": "#8a00d4",
+					"Dark": "#00e5ff"
+				}
+			},
+			"Shadow": {
+				"Color": {
+					"Light": "rgba(26, 16, 40, 0.12)",
+					"Dark": "rgba(0, 0, 0, 0.55)"
+				}
+			},
+			"Syntax": {
+				"Keyword": {
+					"Light": "#8a00d4",
+					"Dark": "#00e5ff"
+				},
+				"String": {
+					"Light": "#00a050",
+					"Dark": "#39ff14"
+				},
+				"Number": {
+					"Light": "#d41878",
+					"Dark": "#ff2ec4"
+				},
+				"Comment": {
+					"Light": "#7a6a98",
+					"Dark": "#6a6488"
+				},
+				"Operator": {
+					"Light": "#8a00d4",
+					"Dark": "#00e5ff"
+				},
+				"Punctuation": {
+					"Light": "#4a3868",
+					"Dark": "#b0a8c8"
+				},
+				"Function": {
+					"Light": "#8a00d4",
+					"Dark": "#00e5ff"
+				},
+				"Variable": {
+					"Light": "#1a1028",
+					"Dark": "#e8e0f0"
+				},
+				"Type": {
+					"Light": "#d41878",
+					"Dark": "#ff2ec4"
+				},
+				"Builtin": {
+					"Light": "#d41878",
+					"Dark": "#ff2ec4"
+				},
+				"Property": {
+					"Light": "#c82050",
+					"Dark": "#ff3860"
+				},
+				"Tag": {
+					"Light": "#8a00d4",
+					"Dark": "#00e5ff"
+				},
+				"AttrName": {
+					"Light": "#d41878",
+					"Dark": "#ff2ec4"
+				},
+				"AttrValue": {
+					"Light": "#00a050",
+					"Dark": "#39ff14"
+				}
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+				"Serif": "Georgia, Cambria, 'Times New Roman', Times, serif",
+				"Mono": "'SFMono-Regular', 'SF Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace"
+			},
+			"Size": {
+				"XS": "0.75rem",
+				"SM": "0.875rem",
+				"MD": "1rem",
+				"LG": "1.125rem",
+				"XL": "1.375rem",
+				"XXL": "1.75rem"
+			},
+			"Weight": {
+				"Regular": "400",
+				"Medium": "500",
+				"Bold": "700"
+			},
+			"LineHeight": {
+				"Tight": "1.2",
+				"Normal": "1.5",
+				"Loose": "1.7"
+			}
+		},
+		"Spacing": {
+			"XS": "4px",
+			"SM": "8px",
+			"MD": "12px",
+			"LG": "16px",
+			"XL": "24px",
+			"XXL": "32px"
+		},
+		"Radius": {
+			"None": "0",
+			"SM": "2px",
+			"MD": "4px",
+			"LG": "8px",
+			"XL": "12px",
+			"Pill": "999px"
+		},
+		"Layout": {
+			"SidebarWidth": "230px",
+			"TopbarHeight": "52px",
+			"StatusbarHeight": "28px"
+		}
+	},
+	"Brand": {
+		"Name": "Retold Labs",
+		"Tagline": "Run, compare, and distribute ML experiments across the mesh"
+	}
+}

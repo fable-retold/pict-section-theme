@@ -60,6 +60,9 @@ class ThemeRegistry
 			// App-extracted themes (named after their host app)
 			{ Hash: 'retold-manager',                Category: 'App',  Bundle: require('./retold-manager.json') },
 			{ Hash: 'retold-content-system',         Category: 'App',  Bundle: require('./retold-content-system.json') },
+			{ Hash: 'retold-labs',                   Category: 'App',  Bundle: require('./retold-labs.json') },
+			{ Hash: 'retold-labs-cyberpunk',         Category: 'App',  Bundle: require('./retold-labs-cyberpunk.json') },
+			{ Hash: 'retold-labs-retro',             Category: 'App',  Bundle: require('./retold-labs-retro.json') },
 			{ Hash: 'ultravisor-desert-dusk',        Category: 'App',  Bundle: require('./ultravisor-desert-dusk.json') },
 			{ Hash: 'ultravisor-desert-day',         Category: 'App',  Bundle: require('./ultravisor-desert-day.json') },
 			{ Hash: 'ultravisor-desert-sunset',      Category: 'App',  Bundle: require('./ultravisor-desert-sunset.json') },
