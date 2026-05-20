@@ -1,0 +1,60 @@
+{
+	"Hash": "flow-mono",
+	"Name": "Flow Mono",
+	"Version": "0.0.1",
+	"Description": "High-contrast monochrome flow editor look. Paired light/dark — pure black on white or white on black.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "system",
+		"Default": "light"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary":   { "Light": "#ffffff", "Dark": "#000000" },
+				"Secondary": { "Light": "#f0f0f0", "Dark": "#1a1a1a" },
+				"Tertiary":  { "Light": "#e0e0e0", "Dark": "#262626" },
+				"Panel":     { "Light": "#ffffff", "Dark": "#000000" },
+				"Hover":     { "Light": "#eeeeee", "Dark": "#1f1f1f" },
+				"Selected":  { "Light": "#dddddd", "Dark": "#333333" }
+			},
+			"Text": {
+				"Primary":   { "Light": "#000000", "Dark": "#ffffff" },
+				"Secondary": { "Light": "#444444", "Dark": "#cccccc" },
+				"Muted":     { "Light": "#888888", "Dark": "#888888" },
+				"OnBrand":   { "Light": "#ffffff", "Dark": "#000000" }
+			},
+			"Brand": {
+				"Primary":      { "Light": "#444444", "Dark": "#bbbbbb" },
+				"PrimaryHover": { "Light": "#222222", "Dark": "#dddddd" },
+				"Accent":       { "Light": "#666666", "Dark": "#999999" }
+			},
+			"Border": {
+				"Default": { "Light": "#000000", "Dark": "#ffffff" },
+				"Light":   { "Light": "#cccccc", "Dark": "#333333" },
+				"Strong":  { "Light": "#000000", "Dark": "#ffffff" }
+			},
+			"Status": {
+				"Success": { "Light": "#000000", "Dark": "#ffffff" },
+				"Warning": { "Light": "#000000", "Dark": "#ffffff" },
+				"Error":   { "Light": "#000000", "Dark": "#ffffff" },
+				"Info":    { "Light": "#000000", "Dark": "#ffffff" }
+			},
+			"Scrollbar": {
+				"Track": { "Light": "#f0f0f0", "Dark": "#1a1a1a" },
+				"Thumb": { "Light": "#888888", "Dark": "#888888" },
+				"Hover": { "Light": "#444444", "Dark": "#cccccc" }
+			},
+			"Focus": {
+				"Outline": { "Light": "#000000", "Dark": "#ffffff" }
+			},
+			"Shadow": {
+				"Color": { "Light": "rgba(0, 0, 0, 0.25)", "Dark": "rgba(255, 255, 255, 0.25)" }
+			}
+		}
+	},
+	"Brand": {
+		"Name": "Flow Mono",
+		"Tagline": "Monochrome ink-on-paper"
+	}
+}

@@ -1,0 +1,60 @@
+{
+	"Hash": "flow-whiteboard",
+	"Name": "Flow Whiteboard",
+	"Version": "0.0.1",
+	"Description": "Minimal whiteboard aesthetic — transparent fills with colored brackets per node type. Single-mode (light).",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "single",
+		"Default": "light"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary":   "#ffffff",
+				"Secondary": "#fafafa",
+				"Tertiary":  "#f5f5f5",
+				"Panel":     "#ffffff",
+				"Hover":     "#f0f0f0",
+				"Selected":  "#e0eaff"
+			},
+			"Text": {
+				"Primary":   "#333333",
+				"Secondary": "#555555",
+				"Muted":     "#999999",
+				"OnBrand":   "#ffffff"
+			},
+			"Brand": {
+				"Primary":      "#2255aa",
+				"PrimaryHover": "#1a4488",
+				"Accent":       "#1abc9c"
+			},
+			"Border": {
+				"Default": "#888888",
+				"Light":   "#cccccc",
+				"Strong":  "#555555"
+			},
+			"Status": {
+				"Success": "#27ae60",
+				"Warning": "#f39c12",
+				"Error":   "#e74c3c",
+				"Info":    "#3498db"
+			},
+			"Scrollbar": {
+				"Track": "#f5f5f5",
+				"Thumb": "#cccccc",
+				"Hover": "#888888"
+			},
+			"Focus": {
+				"Outline": "#2255aa"
+			},
+			"Shadow": {
+				"Color": "rgba(0, 0, 0, 0.06)"
+			}
+		}
+	},
+	"Brand": {
+		"Name": "Flow Whiteboard",
+		"Tagline": "Minimal whiteboard sketching"
+	}
+}

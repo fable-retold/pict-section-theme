@@ -42,6 +42,16 @@
 				"Error":   { "Light": "#D9534F", "Dark": "#E87B78" },
 				"Info":    { "Light": "#5DA6C7", "Dark": "#7FBDD8" }
 			},
+			"Data": {
+				"1": { "Light": "#2E7D74", "Dark": "#4FB3A6" },
+				"2": { "Light": "#E8A94D", "Dark": "#F0BE6E" },
+				"3": { "Light": "#7BC47F", "Dark": "#8FD493" },
+				"4": { "Light": "#D9534F", "Dark": "#E87B78" },
+				"5": { "Light": "#A07ACC", "Dark": "#BCA0DC" },
+				"6": { "Light": "#5DA6C7", "Dark": "#7FBDD8" },
+				"7": { "Light": "#C46B8A", "Dark": "#D8919E" },
+				"8": { "Light": "#8A7F72", "Dark": "#B8AFA4" }
+			},
 			"Scrollbar": {
 				"Track": { "Light": "#F5F0E8", "Dark": "#26221C" },
 				"Thumb": { "Light": "#C4BDB0", "Dark": "#4A4036" },

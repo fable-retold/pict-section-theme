@@ -53,8 +53,8 @@ class ThemeRegistry
 	{
 		const STARTER =
 		[
-			// Retold ecosystem defaults
-			{ Hash: 'retold-default',     Category: 'Default',  IsDefault: true,  Bundle: require('./retold-default.json') },
+			// Framework defaults
+			{ Hash: 'pict-default',       Category: 'Default',  IsDefault: true,  Bundle: require('./pict-default.json') },
 			{ Hash: 'retold-mono',        Category: 'Default',  Bundle: require('./retold-mono.json') },
 
 			// App-extracted themes (named after their host app)
@@ -70,9 +70,19 @@ class ThemeRegistry
 			{ Hash: 'ultravisor-professional-dark',  Category: 'App',  Bundle: require('./ultravisor-professional-dark.json') },
 			{ Hash: 'ultravisor-desert-canyon',      Category: 'App',  Bundle: require('./ultravisor-desert-canyon.json') },
 
-			// Playground / starter paired themes (have light/dark)
+			// Paired light/dark themes
+			{ Hash: 'ocean',              Category: 'Paired',   Bundle: require('./ocean.json') },
 			{ Hash: 'playground-corp',    Category: 'Paired',   Bundle: require('./playground-corp.json') },
-			{ Hash: 'playground-starter', Category: 'Paired',   Bundle: require('./playground-starter.json') },
+
+			// Flow themes (originally pict-section-flow's internal presets; now first-class
+			// pict-section-theme entries so other apps can adopt the same color identity)
+			{ Hash: 'flow-modern',        Category: 'Flow',     Bundle: require('./flow-modern.json') },
+			{ Hash: 'flow-sketch',        Category: 'Flow',     Bundle: require('./flow-sketch.json') },
+			{ Hash: 'flow-blueprint',     Category: 'Flow',     Bundle: require('./flow-blueprint.json') },
+			{ Hash: 'flow-mono',          Category: 'Flow',     Bundle: require('./flow-mono.json') },
+			{ Hash: 'flow-retro-80s',     Category: 'Flow',     Bundle: require('./flow-retro-80s.json') },
+			{ Hash: 'flow-retro-90s',     Category: 'Flow',     Bundle: require('./flow-retro-90s.json') },
+			{ Hash: 'flow-whiteboard',    Category: 'Flow',     Bundle: require('./flow-whiteboard.json') },
 
 			// Greys (low-light single-mode themes)
 			{ Hash: 'twilight',           Category: 'Grey',     Bundle: require('./twilight.json') },

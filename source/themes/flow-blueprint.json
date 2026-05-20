@@ -1,0 +1,60 @@
+{
+	"Hash": "flow-blueprint",
+	"Name": "Flow Blueprint",
+	"Version": "0.0.1",
+	"Description": "Technical-drawing aesthetic — white-on-navy with yellow selection. Single-mode (always dark blueprint).",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "single",
+		"Default": "dark"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary":   "#1a3a6a",
+				"Secondary": "#142e54",
+				"Tertiary":  "rgba(255,255,255,0.1)",
+				"Panel":     "#1a3a6a",
+				"Hover":     "rgba(255,255,255,0.06)",
+				"Selected":  "rgba(255,221,68,0.18)"
+			},
+			"Text": {
+				"Primary":   "#ffffff",
+				"Secondary": "rgba(255,255,255,0.7)",
+				"Muted":     "rgba(255,255,255,0.5)",
+				"OnBrand":   "#0d2244"
+			},
+			"Brand": {
+				"Primary":      "#ffdd44",
+				"PrimaryHover": "#ffe978",
+				"Accent":       "#88ffbb"
+			},
+			"Border": {
+				"Default": "rgba(255,255,255,0.6)",
+				"Light":   "rgba(255,255,255,0.15)",
+				"Strong":  "#ffffff"
+			},
+			"Status": {
+				"Success": "#88ffbb",
+				"Warning": "#ffdd44",
+				"Error":   "#ff8888",
+				"Info":    "#88bbff"
+			},
+			"Scrollbar": {
+				"Track": "rgba(255,255,255,0.05)",
+				"Thumb": "rgba(255,255,255,0.3)",
+				"Hover": "rgba(255,255,255,0.5)"
+			},
+			"Focus": {
+				"Outline": "#ffdd44"
+			},
+			"Shadow": {
+				"Color": "rgba(0, 0, 0, 0.4)"
+			}
+		}
+	},
+	"Brand": {
+		"Name": "Flow Blueprint",
+		"Tagline": "Technical drawing on navy"
+	}
+}

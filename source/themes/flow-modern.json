@@ -1,0 +1,60 @@
+{
+	"Hash": "flow-modern",
+	"Name": "Flow Modern",
+	"Version": "0.0.1",
+	"Description": "The default modern look for pict-section-flow — clean, theme-neutral. Paired light/dark.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "system",
+		"Default": "light"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary":   { "Light": "#ffffff", "Dark": "#1a1a1a" },
+				"Secondary": { "Light": "#f5f5f5", "Dark": "#242424" },
+				"Tertiary":  { "Light": "#ecf0f1", "Dark": "#2e2e2e" },
+				"Panel":     { "Light": "#ffffff", "Dark": "#222222" },
+				"Hover":     { "Light": "#eef3f7", "Dark": "#2a2a2a" },
+				"Selected":  { "Light": "#dde7f3", "Dark": "#2a3550" }
+			},
+			"Text": {
+				"Primary":   { "Light": "#2c3e50", "Dark": "#ededed" },
+				"Secondary": { "Light": "#7f8c8d", "Dark": "#bdbdbd" },
+				"Muted":     { "Light": "#95a5a6", "Dark": "#888888" },
+				"OnBrand":   { "Light": "#ffffff", "Dark": "#1a1a1a" }
+			},
+			"Brand": {
+				"Primary":      { "Light": "#2255aa", "Dark": "#5b8aff" },
+				"PrimaryHover": { "Light": "#1a4488", "Dark": "#7ba4ff" },
+				"Accent":       { "Light": "#1abc9c", "Dark": "#4fd1b5" }
+			},
+			"Border": {
+				"Default": { "Light": "#bdc3c7", "Dark": "#3a3a3a" },
+				"Light":   { "Light": "#ecf0f1", "Dark": "#2c2c2c" },
+				"Strong":  { "Light": "#95a5a6", "Dark": "#5a5a5a" }
+			},
+			"Status": {
+				"Success": { "Light": "#27ae60", "Dark": "#5fc377" },
+				"Warning": { "Light": "#f39c12", "Dark": "#f0b84a" },
+				"Error":   { "Light": "#e74c3c", "Dark": "#ff7373" },
+				"Info":    { "Light": "#3498db", "Dark": "#5fb4ff" }
+			},
+			"Scrollbar": {
+				"Track": { "Light": "#ecf0f1", "Dark": "#1f1f1f" },
+				"Thumb": { "Light": "#bdc3c7", "Dark": "#3f3f3f" },
+				"Hover": { "Light": "#95a5a6", "Dark": "#5a5a5a" }
+			},
+			"Focus": {
+				"Outline": { "Light": "#2255aa", "Dark": "#5b8aff" }
+			},
+			"Shadow": {
+				"Color": { "Light": "rgba(0, 0, 0, 0.12)", "Dark": "rgba(0, 0, 0, 0.55)" }
+			}
+		}
+	},
+	"Brand": {
+		"Name": "Flow Modern",
+		"Tagline": "Clean modern flow editor look"
+	}
+}

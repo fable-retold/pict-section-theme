@@ -1,0 +1,60 @@
+{
+	"Hash": "flow-retro-80s",
+	"Name": "Flow Retro 80s",
+	"Version": "0.0.1",
+	"Description": "Neon-on-purple synthwave aesthetic for the flow editor. Single-mode (always dark) — '80s arcade glow.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "single",
+		"Default": "dark"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary":   "#0a0015",
+				"Secondary": "#1a0a2e",
+				"Tertiary":  "#2a0a4e",
+				"Panel":     "#1a0a2e",
+				"Hover":     "#2a0a4e",
+				"Selected":  "#3a1466"
+			},
+			"Text": {
+				"Primary":   "#00ffff",
+				"Secondary": "#ff66ff",
+				"Muted":     "#9966cc",
+				"OnBrand":   "#0a0015"
+			},
+			"Brand": {
+				"Primary":      "#ff00ff",
+				"PrimaryHover": "#ff66ff",
+				"Accent":       "#00ffff"
+			},
+			"Border": {
+				"Default": "#ff00ff",
+				"Light":   "#2a0a4e",
+				"Strong":  "#ff00ff"
+			},
+			"Status": {
+				"Success": "#00ff66",
+				"Warning": "#ffdd44",
+				"Error":   "#ff4477",
+				"Info":    "#00ffff"
+			},
+			"Scrollbar": {
+				"Track": "#1a0a2e",
+				"Thumb": "#ff00ff",
+				"Hover": "#ff66ff"
+			},
+			"Focus": {
+				"Outline": "#00ffff"
+			},
+			"Shadow": {
+				"Color": "rgba(255, 0, 255, 0.4)"
+			}
+		}
+	},
+	"Brand": {
+		"Name": "Flow Retro 80s",
+		"Tagline": "Neon synthwave glow"
+	}
+}

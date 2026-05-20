@@ -103,7 +103,7 @@ suite('pict-section-theme', () =>
 				.filter((p) => p.IsDefault);
 			libAssert.strictEqual(tmpDefaults.length, 1,
 				'expected exactly one IsDefault entry; got ' + tmpDefaults.length);
-			libAssert.strictEqual(tmpDefaults[0].Hash, 'retold-default');
+			libAssert.strictEqual(tmpDefaults[0].Hash, 'pict-default');
 		});
 	});
 
@@ -170,10 +170,10 @@ suite('pict-section-theme', () =>
 		test('ApplyDefault triggers an initial applyTheme call', () =>
 		{
 			let tmpPict = createPict();
-			libPictSectionTheme.install(tmpPict, { ApplyDefault: 'retold-default', DefaultMode: 'light' });
+			libPictSectionTheme.install(tmpPict, { ApplyDefault: 'pict-default', DefaultMode: 'light' });
 
 			let tmpActive = tmpPict.providers.Theme.getActiveTheme();
-			libAssert.strictEqual(tmpActive.Hash, 'retold-default');
+			libAssert.strictEqual(tmpActive.Hash, 'pict-default');
 			libAssert.strictEqual(tmpActive.Mode, 'light');
 		});
 	});

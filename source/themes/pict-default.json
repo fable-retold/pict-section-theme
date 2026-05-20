@@ -1,8 +1,8 @@
 {
-	"Hash": "retold-default",
-	"Name": "Retold Default",
+	"Hash": "pict-default",
+	"Name": "Pict Default",
 	"Version": "0.0.1",
-	"Description": "The reference paired light/dark theme for the Retold ecosystem. Neutral palette suitable for any app; dark mode is mid-grey rather than pure black to reduce eye strain.",
+	"Description": "The reference paired light/dark theme for pict-based applications. Neutral palette suitable for any app; dark mode is mid-grey rather than pure black to reduce eye strain.",
 	"Comprehensive": true,
 	"Modes": {
 		"Strategy": "system",
@@ -39,6 +39,16 @@
 				"Warning": { "Light": "#a86b00", "Dark": "#f0b84a" },
 				"Error":   { "Light": "#b62828", "Dark": "#ff7373" },
 				"Info":    { "Light": "#1f6fb5", "Dark": "#5fb4ff" }
+			},
+			"Data": {
+				"1": { "Light": "#3357c7", "Dark": "#6b8eff" },
+				"2": { "Light": "#c75033", "Dark": "#ff8a6b" },
+				"3": { "Light": "#2e7a3a", "Dark": "#5fc377" },
+				"4": { "Light": "#a86b00", "Dark": "#f0b84a" },
+				"5": { "Light": "#6b3aac", "Dark": "#b08eff" },
+				"6": { "Light": "#1f6fb5", "Dark": "#5fb4ff" },
+				"7": { "Light": "#c63a8e", "Dark": "#ff7fb6" },
+				"8": { "Light": "#6b6b6b", "Dark": "#bdbdbd" }
 			},
 			"Scrollbar": {
 				"Track": { "Light": "#ebebeb", "Dark": "#1f1f1f" },
@@ -141,14 +151,14 @@
 		}
 	},
 	"Brand": {
-		"Name": "Retold",
-		"Tagline": "A suite of JavaScript modules for building web applications and APIs."
+		"Name": "Pict",
+		"Tagline": "A JavaScript MVC framework for building web applications."
 	},
 	"CSS": [
 		{
-			"Hash": "retold-default-brand-accents",
+			"Hash": "pict-default-brand-accents",
 			"Priority": 600,
-			"Content": "/* retold-default — subtle brand-aware accents.\n   Falls back gracefully to theme-color tokens when no brand is registered,\n   so non-branded apps still look right. */\na { text-decoration-color: var(--brand-color-primary-mode, var(--theme-color-brand-primary, currentColor)); text-decoration-thickness: 2px; text-underline-offset: 3px; }\nh1 { border-bottom: 2px solid var(--brand-color-primary-mode, var(--theme-color-border-default, transparent)); padding-bottom: 6px; }\nh2 { border-bottom: 1px solid var(--brand-color-secondary-mode, var(--theme-color-border-light, transparent)); padding-bottom: 4px; }"
+			"Content": "/* pict-default — subtle brand-aware accents.\n   Falls back gracefully to theme-color tokens when no brand is registered,\n   so non-branded apps still look right. */\na { text-decoration-color: var(--brand-color-primary-mode, var(--theme-color-brand-primary, currentColor)); text-decoration-thickness: 2px; text-underline-offset: 3px; }\nh1 { border-bottom: 2px solid var(--brand-color-primary-mode, var(--theme-color-border-default, transparent)); padding-bottom: 6px; }\nh2 { border-bottom: 1px solid var(--brand-color-secondary-mode, var(--theme-color-border-light, transparent)); padding-bottom: 4px; }"
 		}
 	]
 }

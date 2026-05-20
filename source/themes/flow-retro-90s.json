@@ -1,0 +1,60 @@
+{
+	"Hash": "flow-retro-90s",
+	"Name": "Flow Retro 90s",
+	"Version": "0.0.1",
+	"Description": "Windows-95 aesthetic — gray panels, navy title bars, teal desktop. Single-mode (always its specific palette).",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "single",
+		"Default": "light"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary":   "#008080",
+				"Secondary": "#c0c0c0",
+				"Tertiary":  "#d0d0d0",
+				"Panel":     "#c0c0c0",
+				"Hover":     "#d0d0d0",
+				"Selected":  "#a8c8e0"
+			},
+			"Text": {
+				"Primary":   "#000000",
+				"Secondary": "#404040",
+				"Muted":     "#606060",
+				"OnBrand":   "#ffffff"
+			},
+			"Brand": {
+				"Primary":      "#000080",
+				"PrimaryHover": "#0000a0",
+				"Accent":       "#008000"
+			},
+			"Border": {
+				"Default": "#808080",
+				"Light":   "#a0a0a0",
+				"Strong":  "#404040"
+			},
+			"Status": {
+				"Success": "#008000",
+				"Warning": "#808000",
+				"Error":   "#800000",
+				"Info":    "#000080"
+			},
+			"Scrollbar": {
+				"Track": "#c0c0c0",
+				"Thumb": "#808080",
+				"Hover": "#404040"
+			},
+			"Focus": {
+				"Outline": "#008080"
+			},
+			"Shadow": {
+				"Color": "#404040"
+			}
+		}
+	},
+	"Brand": {
+		"Name": "Flow Retro 90s",
+		"Tagline": "Workstation chrome from the 90s"
+	}
+}

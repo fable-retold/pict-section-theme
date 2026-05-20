@@ -40,6 +40,16 @@
 				"Error":   { "Light": "#000000", "Dark": "#ffffff" },
 				"Info":    { "Light": "#000000", "Dark": "#ffffff" }
 			},
+			"Data": {
+				"1": { "Light": "#000000", "Dark": "#ffffff" },
+				"2": { "Light": "#262626", "Dark": "#e0e0e0" },
+				"3": { "Light": "#404040", "Dark": "#c0c0c0" },
+				"4": { "Light": "#595959", "Dark": "#a0a0a0" },
+				"5": { "Light": "#737373", "Dark": "#808080" },
+				"6": { "Light": "#8c8c8c", "Dark": "#737373" },
+				"7": { "Light": "#a6a6a6", "Dark": "#595959" },
+				"8": { "Light": "#bfbfbf", "Dark": "#404040" }
+			},
 			"Scrollbar": {
 				"Track": { "Light": "#e0e0e0", "Dark": "#101010" },
 				"Thumb": { "Light": "#888888", "Dark": "#666666" },

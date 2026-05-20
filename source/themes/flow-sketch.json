@@ -1,0 +1,60 @@
+{
+	"Hash": "flow-sketch",
+	"Name": "Flow Sketch",
+	"Version": "0.0.1",
+	"Description": "Warm-paper sketch aesthetic for the flow editor. Single-mode (always light) — sketches live on paper.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "single",
+		"Default": "light"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary":   "#fffef5",
+				"Secondary": "#faf8ed",
+				"Tertiary":  "#f0ece0",
+				"Panel":     "#fffef5",
+				"Hover":     "#f4f0e2",
+				"Selected":  "#e8dfc8"
+			},
+			"Text": {
+				"Primary":   "#333333",
+				"Secondary": "#555555",
+				"Muted":     "#888888",
+				"OnBrand":   "#ffffff"
+			},
+			"Brand": {
+				"Primary":      "#2255aa",
+				"PrimaryHover": "#1a4488",
+				"Accent":       "#c47b5a"
+			},
+			"Border": {
+				"Default": "#444444",
+				"Light":   "#ccccaa",
+				"Strong":  "#222222"
+			},
+			"Status": {
+				"Success": "#55aa77",
+				"Warning": "#d4a040",
+				"Error":   "#c44836",
+				"Info":    "#5577bb"
+			},
+			"Scrollbar": {
+				"Track": "#f0ece0",
+				"Thumb": "#c5c0a8",
+				"Hover": "#9e9a82"
+			},
+			"Focus": {
+				"Outline": "#2255aa"
+			},
+			"Shadow": {
+				"Color": "rgba(0, 0, 0, 0.08)"
+			}
+		}
+	},
+	"Brand": {
+		"Name": "Flow Sketch",
+		"Tagline": "Hand-drawn paper aesthetic"
+	}
+}

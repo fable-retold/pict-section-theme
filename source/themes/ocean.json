@@ -1,0 +1,157 @@
+{
+	"Hash": "ocean",
+	"Name": "Ocean",
+	"Version": "0.0.1",
+	"Description": "Cool blue-greens (180-235°) with warm coral / amber punctuation (5-30°). Paired light/dark; feels like sea + sun on the horizon.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "system",
+		"Default": "light"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary":   { "Light": "#f4f9fb", "Dark": "#0e1820" },
+				"Secondary": { "Light": "#e8f1f5", "Dark": "#15212b" },
+				"Tertiary":  { "Light": "#dde9ee", "Dark": "#1f2c38" },
+				"Panel":     { "Light": "#ffffff", "Dark": "#1a2632" },
+				"Hover":     { "Light": "#e0eef3", "Dark": "#26323f" },
+				"Selected":  { "Light": "#c8e1ea", "Dark": "#1e3a48" }
+			},
+			"Text": {
+				"Primary":     { "Light": "#0e2832", "Dark": "#e1ecf0" },
+				"Secondary":   { "Light": "#3a5662", "Dark": "#a8c0c8" },
+				"Muted":       { "Light": "#6c828b", "Dark": "#7a8e96" },
+				"Placeholder": { "Light": "#90a4ad", "Dark": "#5a6e76" }
+			},
+			"Brand": {
+				"Primary":      { "Light": "#0e7c8a", "Dark": "#4dc4d4" },
+				"PrimaryHover": { "Light": "#0a6371", "Dark": "#6dd4e2" },
+				"Accent":       { "Light": "#e8a050", "Dark": "#f0b878" }
+			},
+			"Border": {
+				"Default": { "Light": "#c0d5dc", "Dark": "#2c3d49" },
+				"Light":   { "Light": "#d8e6ec", "Dark": "#1f2c38" },
+				"Strong":  { "Light": "#90b0bc", "Dark": "#4a6470" }
+			},
+			"Status": {
+				"Success": { "Light": "#1f8a52", "Dark": "#4dc97a" },
+				"Warning": { "Light": "#d68910", "Dark": "#f0b020" },
+				"Error":   { "Light": "#c93a3a", "Dark": "#ff6464" },
+				"Info":    { "Light": "#0e7c8a", "Dark": "#4dc4d4" }
+			},
+			"Data": {
+				"1": { "Light": "#0e7c8a", "Dark": "#4dc4d4" },
+				"2": { "Light": "#e8a050", "Dark": "#f0b878" },
+				"3": { "Light": "#1f8a52", "Dark": "#4dc97a" },
+				"4": { "Light": "#c93a3a", "Dark": "#ff6464" },
+				"5": { "Light": "#b07bac", "Dark": "#cda6cf" },
+				"6": { "Light": "#d68910", "Dark": "#f0b020" },
+				"7": { "Light": "#5a7f9e", "Dark": "#82a0c4" },
+				"8": { "Light": "#6c828b", "Dark": "#a8c0c8" }
+			},
+			"Scrollbar": {
+				"Track": { "Light": "#dde9ee", "Dark": "#15212b" },
+				"Thumb": { "Light": "#a8c2cc", "Dark": "#324658" },
+				"Hover": { "Light": "#7a99a4", "Dark": "#506876" }
+			},
+			"Selection": {
+				"Background": { "Light": "#c8e1ea", "Dark": "#1e3a48" },
+				"Text":       { "Light": "#0e2832", "Dark": "#e1ecf0" }
+			},
+			"Focus": {
+				"Outline": { "Light": "#0e7c8a", "Dark": "#4dc4d4" }
+			},
+			"Shadow": {
+				"Color": { "Light": "rgba(14, 40, 50, 0.12)", "Dark": "rgba(0, 0, 0, 0.55)" }
+			},
+			"Syntax": {
+				"Keyword":     { "Light": "#0e7c8a", "Dark": "#4dc4d4" },
+				"String":      { "Light": "#1f8a52", "Dark": "#4dc97a" },
+				"Number":      { "Light": "#d68910", "Dark": "#f0b020" },
+				"Comment":     { "Light": "#90a4ad", "Dark": "#5a6e76" },
+				"Operator":    { "Light": "#3a5662", "Dark": "#a8c0c8" },
+				"Punctuation": { "Light": "#3a5662", "Dark": "#a8c0c8" },
+				"Function":    { "Light": "#0e7c8a", "Dark": "#4dc4d4" },
+				"Variable":    { "Light": "#0e2832", "Dark": "#e1ecf0" },
+				"Type":        { "Light": "#e8a050", "Dark": "#f0b878" },
+				"Builtin":     { "Light": "#d68910", "Dark": "#f0b020" },
+				"Property":    { "Light": "#c93a3a", "Dark": "#ff6464" },
+				"Tag":         { "Light": "#c93a3a", "Dark": "#ff6464" },
+				"AttrName":    { "Light": "#d68910", "Dark": "#f0b020" },
+				"AttrValue":   { "Light": "#1f8a52", "Dark": "#4dc97a" }
+			},
+			"Editor": {
+				"LineNumberBackground": { "Light": "#e8f1f5", "Dark": "#15212b" },
+				"LineNumberText":       { "Light": "#90a4ad", "Dark": "#5a6e76" },
+				"CurrentLineHighlight": { "Light": "#e0eef3", "Dark": "#26323f" },
+				"SelectionBackground":  { "Light": "#c8e1ea", "Dark": "#1e3a48" },
+				"GutterBorder":         { "Light": "#d8e6ec", "Dark": "#1f2c38" }
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+				"Serif": "Georgia, Cambria, Times New Roman, Times, serif",
+				"Mono": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+			},
+			"Size": {
+				"XS": "0.75rem",
+				"SM": "0.875rem",
+				"MD": "1rem",
+				"LG": "1.125rem",
+				"XL": "1.375rem",
+				"XXL": "1.75rem"
+			},
+			"Weight": {
+				"Regular": "400",
+				"Medium": "500",
+				"Bold": "700"
+			},
+			"LineHeight": {
+				"Tight": "1.2",
+				"Normal": "1.45",
+				"Loose": "1.7"
+			}
+		},
+		"Spacing": {
+			"XS": "4px",
+			"SM": "8px",
+			"MD": "12px",
+			"LG": "16px",
+			"XL": "24px",
+			"XXL": "32px"
+		},
+		"Radius": {
+			"None": "0",
+			"SM": "2px",
+			"MD": "4px",
+			"LG": "8px",
+			"XL": "12px",
+			"Pill": "999px"
+		},
+		"Shadow": {
+			"SM": "0 1px 2px var(--theme-color-shadow-color)",
+			"MD": "0 2px 6px var(--theme-color-shadow-color)",
+			"LG": "0 6px 18px var(--theme-color-shadow-color)"
+		},
+		"ZIndex": {
+			"Base": "0",
+			"Dropdown": "100",
+			"Sticky": "200",
+			"Overlay": "900",
+			"Modal": "1000",
+			"Toast": "2000",
+			"Tooltip": "3000"
+		},
+		"Duration": {
+			"Fast": "100ms",
+			"Normal": "200ms",
+			"Slow": "400ms"
+		}
+	},
+	"Brand": {
+		"Name": "Ocean",
+		"Tagline": "Cool waters, warm sun"
+	}
+}
