@@ -203,6 +203,22 @@ function listCatalog()
 	return tmpList;
 }
 
+// Resolve the canonical fallback theme hash from the catalog: the entry
+// flagged IsDefault, or — if no entry is flagged — the first registered
+// entry, or null if the catalog is empty. Used as the last-resort boot
+// theme when nothing else resolved (no ApplyDefault, no saved state, or
+// a saved hash that's been removed from the catalog).
+function _resolveCatalogDefault()
+{
+	let tmpEntries = libCatalog.list();
+	if (!tmpEntries || tmpEntries.length === 0) return null;
+	for (let i = 0; i < tmpEntries.length; i++)
+	{
+		if (tmpEntries[i].IsDefault) return tmpEntries[i].Hash;
+	}
+	return tmpEntries[0].Hash;
+}
+
 // ── Bootstrap routine ────────────────────────────────────────────────────
 // Shared between the provider class (new path) and the install() function
 // (legacy path). Performs the actual wiring against a Pict instance.
@@ -298,6 +314,27 @@ function _bootstrap(pPict, pOptions)
 
 		tmpProvider.onApply(tmpSaveCurrent);
 		libThemeScale.onChange(tmpSaveCurrent);
+	}
+
+	// If nothing resolved a theme hash (no ApplyDefault, no saved state, or
+	// a saved hash that's no longer in the registry), fall back to the
+	// catalog's canonical default (IsDefault: true) so the host always
+	// boots with CSS variables populated. Without this fallback an app
+	// configured without ApplyDefault — or one whose ApplyDefault hash
+	// was removed — paints unstyled (token references resolve to their
+	// inline fallback colors, which are intentionally bland) until the
+	// user manually picks something from the picker.
+	if (tmpProvider && (!tmpBootHash || (typeof tmpProvider.getTheme === 'function' && !tmpProvider.getTheme(tmpBootHash))))
+	{
+		let tmpFallback = _resolveCatalogDefault();
+		if (tmpFallback)
+		{
+			tmpBootHash = tmpFallback;
+			if (pPict.log && pPict.log.info)
+			{
+				pPict.log.info('pict-section-theme: no theme resolved at boot — falling back to catalog default "' + tmpFallback + '"');
+			}
+		}
 	}
 
 	if (tmpBootHash && tmpProvider)
