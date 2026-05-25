@@ -161,7 +161,21 @@ async function main()
 		try
 		{
 			let tmpResolved = require.resolve('retold-sharp', { paths: [tmpSearchPaths[i]] });
-			tmpSharp = require(tmpResolved);
+			let tmpCandidate = require(tmpResolved);
+			// retold-sharp exports a throwing stub when the underlying
+			// `sharp` native binary failed to resolve.  Use its
+			// `checkAvailable()` diagnostic to skip the stub so the
+			// SVG-only fall-through fires instead of crashing later
+			// in rasterize().
+			if (tmpCandidate && typeof tmpCandidate.checkAvailable === 'function')
+			{
+				let tmpStatus = tmpCandidate.checkAvailable();
+				if (!tmpStatus || !tmpStatus.available)
+				{
+					continue;
+				}
+			}
+			tmpSharp = tmpCandidate;
 			break;
 		}
 		catch (pErr) { /* try next */ }
