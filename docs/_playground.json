@@ -1,0 +1,24 @@
+{
+	"Kind":              "section",
+	"WrapperKind":       "view",
+	"SectionType":       "pict-section-theme",
+	"ApplicationModule": "PictSectionTheme",
+	"ApplicationGlobal": "PickerView",
+	"ViewName":          "Picker",
+	"ViewConfigKey":     "PickerViewConfig",
+	"ManifestKey":       "DefaultThemePickerManifest",
+	"Editors":
+	[
+		{ "Hash": "pictConfig",  "Label": "Pict Config",       "Language": "json",       "DefaultPath": "playground/pict.json" },
+		{ "Hash": "appConfig",   "Label": "App Config",        "Language": "json",       "DefaultPath": "playground/app.json" },
+		{ "Hash": "appData",     "Label": "Initial AppData",   "Language": "json",       "DefaultPath": "playground/appdata.json" },
+		{ "Hash": "application", "Label": "Application Code",  "Language": "javascript", "DefaultPath": "playground/application.js" }
+	],
+	"Imports":
+	[
+		{ "Name": "pict",                "Source": "local", "Path": "playground/runtime/pict.min.js" },
+		{ "Name": "pict-application",    "Source": "local", "Path": "playground/runtime/pict-application.min.js" },
+		{ "Name": "pict-section-modal",  "Source": "local", "Path": "playground/runtime/pict-section-modal.min.js" },
+		{ "Name": "pict-section-theme",  "Source": "local", "Path": "playground/runtime/pict-section-theme.min.js" }
+	]
+}

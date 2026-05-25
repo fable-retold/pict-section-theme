@@ -1,0 +1,10 @@
+{
+	"Product": "ThemePlayground",
+	"ApplyDefault": "pict-default",
+	"DefaultMode":  "system",
+	"DefaultScale": 1.0,
+	"PickerViewConfig":
+	{
+		"ShowModeIcons": true
+	}
+}

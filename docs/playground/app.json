@@ -1,0 +1,6 @@
+{
+	"Name": "Theme Playground",
+	"Hash": "ThemePlayground",
+	"MainViewportViewIdentifier": "Picker",
+	"AutoRenderMainViewportViewAfterInitialize": true
+}
