@@ -162,6 +162,13 @@ class PictViewThemePicker extends libPictView
 
 	onBeforeRender(pRenderable)
 	{
+		// Defensive resubscribe: onAfterInitialize attempts this once, but if the
+		// Theme provider wasn't yet registered at that moment (a real race when
+		// docuserve wires the Theme-Section after some views have already been
+		// instantiated), the initial subscribe silently no-ops and the picker
+		// never re-renders on applyTheme.  The internal guard makes this cheap
+		// when we're already subscribed.
+		this._subscribeToProvider();
 		this._refreshAppData();
 		return super.onBeforeRender ? super.onBeforeRender(pRenderable) : undefined;
 	}
