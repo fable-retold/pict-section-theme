@@ -1,5 +1,5 @@
 {
-	"Generated": "2026-05-26T18:24:46.154Z",
+	"Generated": "2026-05-26T20:48:27.004Z",
 	"Mode": "module",
 	"GitHubOrg": "fable-retold",
 	"DefaultBranch": "master",
@@ -12,7 +12,10 @@
 		"HasCover": false,
 		"Sidebar": [],
 		"DocFiles": [
+			".nojekyll",
 			"_playground.json",
+			"_version.json",
+			"index.html",
 			"playground/app.json",
 			"playground/appdata.json",
 			"playground/application.js",
@@ -20,7 +23,9 @@
 			"playground/runtime/pict-application.min.js",
 			"playground/runtime/pict-section-modal.min.js",
 			"playground/runtime/pict-section-theme.min.js",
-			"playground/runtime/pict.min.js"
+			"playground/runtime/pict.min.js",
+			"retold-catalog.json",
+			"retold-keyword-index.json"
 		]
 	},
 	"Groups": []
