@@ -1,0 +1,326 @@
+{
+	"Hash": "retold-default",
+	"Name": "Retold Default",
+	"Version": "0.0.1",
+	"Description": "The canonical paired light/dark theme for the Retold ecosystem. Neutral palette suitable for any retold-based app; dark mode is mid-grey rather than pure black to reduce eye strain.",
+	"Comprehensive": true,
+	"Modes": {
+		"Strategy": "system",
+		"Default": "light"
+	},
+	"Tokens": {
+		"Color": {
+			"Background": {
+				"Primary": {
+					"Light": "#ffffff",
+					"Dark": "#1a1a1a"
+				},
+				"Secondary": {
+					"Light": "#f5f5f5",
+					"Dark": "#242424"
+				},
+				"Tertiary": {
+					"Light": "#ebebeb",
+					"Dark": "#2e2e2e"
+				},
+				"Panel": {
+					"Light": "#ffffff",
+					"Dark": "#222222"
+				},
+				"Hover": {
+					"Light": "#f0f0f0",
+					"Dark": "#2a2a2a"
+				},
+				"Selected": {
+					"Light": "#e0eaff",
+					"Dark": "#2a3550"
+				}
+			},
+			"Text": {
+				"Primary": {
+					"Light": "#1a1a1a",
+					"Dark": "#ededed"
+				},
+				"Secondary": {
+					"Light": "#454545",
+					"Dark": "#bdbdbd"
+				},
+				"Muted": {
+					"Light": "#6b6b6b",
+					"Dark": "#888888"
+				},
+				"Placeholder": {
+					"Light": "#9a9a9a",
+					"Dark": "#6a6a6a"
+				}
+			},
+			"Brand": {
+				"Primary": {
+					"Light": "#3357c7",
+					"Dark": "#6b8eff"
+				},
+				"PrimaryHover": {
+					"Light": "#2848b3",
+					"Dark": "#88a4ff"
+				},
+				"Accent": {
+					"Light": "#c75033",
+					"Dark": "#ff8a6b"
+				}
+			},
+			"Border": {
+				"Default": {
+					"Light": "#d6d6d6",
+					"Dark": "#3a3a3a"
+				},
+				"Light": {
+					"Light": "#e9e9e9",
+					"Dark": "#2c2c2c"
+				},
+				"Strong": {
+					"Light": "#a0a0a0",
+					"Dark": "#5a5a5a"
+				}
+			},
+			"Status": {
+				"Success": {
+					"Light": "#2e7a3a",
+					"Dark": "#5fc377"
+				},
+				"Warning": {
+					"Light": "#a86b00",
+					"Dark": "#f0b84a"
+				},
+				"Error": {
+					"Light": "#b62828",
+					"Dark": "#ff7373"
+				},
+				"Info": {
+					"Light": "#1f6fb5",
+					"Dark": "#5fb4ff"
+				}
+			},
+			"Data": {
+				"1": {
+					"Light": "#3357c7",
+					"Dark": "#6b8eff"
+				},
+				"2": {
+					"Light": "#c75033",
+					"Dark": "#ff8a6b"
+				},
+				"3": {
+					"Light": "#2e7a3a",
+					"Dark": "#5fc377"
+				},
+				"4": {
+					"Light": "#a86b00",
+					"Dark": "#f0b84a"
+				},
+				"5": {
+					"Light": "#6b3aac",
+					"Dark": "#b08eff"
+				},
+				"6": {
+					"Light": "#1f6fb5",
+					"Dark": "#5fb4ff"
+				},
+				"7": {
+					"Light": "#c63a8e",
+					"Dark": "#ff7fb6"
+				},
+				"8": {
+					"Light": "#6b6b6b",
+					"Dark": "#bdbdbd"
+				}
+			},
+			"Scrollbar": {
+				"Track": {
+					"Light": "#ebebeb",
+					"Dark": "#1f1f1f"
+				},
+				"Thumb": {
+					"Light": "#c2c2c2",
+					"Dark": "#3f3f3f"
+				},
+				"Hover": {
+					"Light": "#a0a0a0",
+					"Dark": "#5a5a5a"
+				}
+			},
+			"Selection": {
+				"Background": {
+					"Light": "#bcd2ff",
+					"Dark": "#3a4f7a"
+				},
+				"Text": {
+					"Light": "#1a1a1a",
+					"Dark": "#ededed"
+				}
+			},
+			"Focus": {
+				"Outline": {
+					"Light": "#3357c7",
+					"Dark": "#6b8eff"
+				}
+			},
+			"Shadow": {
+				"Color": {
+					"Light": "rgba(0, 0, 0, 0.12)",
+					"Dark": "rgba(0, 0, 0, 0.55)"
+				}
+			},
+			"Syntax": {
+				"Keyword": {
+					"Light": "#a626a4",
+					"Dark": "#c678dd"
+				},
+				"String": {
+					"Light": "#50a14f",
+					"Dark": "#98c379"
+				},
+				"Number": {
+					"Light": "#986801",
+					"Dark": "#d19a66"
+				},
+				"Comment": {
+					"Light": "#a0a1a7",
+					"Dark": "#7f848e"
+				},
+				"Operator": {
+					"Light": "#0184bc",
+					"Dark": "#56b6c2"
+				},
+				"Punctuation": {
+					"Light": "#383a42",
+					"Dark": "#abb2bf"
+				},
+				"Function": {
+					"Light": "#4078f2",
+					"Dark": "#61afef"
+				},
+				"Variable": {
+					"Light": "#383a42",
+					"Dark": "#e06c75"
+				},
+				"Type": {
+					"Light": "#c18401",
+					"Dark": "#e5c07b"
+				},
+				"Builtin": {
+					"Light": "#986801",
+					"Dark": "#d19a66"
+				},
+				"Property": {
+					"Light": "#e45649",
+					"Dark": "#e06c75"
+				},
+				"Tag": {
+					"Light": "#e45649",
+					"Dark": "#e06c75"
+				},
+				"AttrName": {
+					"Light": "#986801",
+					"Dark": "#d19a66"
+				},
+				"AttrValue": {
+					"Light": "#50a14f",
+					"Dark": "#98c379"
+				}
+			},
+			"Editor": {
+				"LineNumberBackground": {
+					"Light": "#f5f5f5",
+					"Dark": "#1f1f1f"
+				},
+				"LineNumberText": {
+					"Light": "#9a9a9a",
+					"Dark": "#6a6a6a"
+				},
+				"CurrentLineHighlight": {
+					"Light": "#f0f0f0",
+					"Dark": "#2a2a2a"
+				},
+				"SelectionBackground": {
+					"Light": "#bcd2ff",
+					"Dark": "#3a4f7a"
+				},
+				"GutterBorder": {
+					"Light": "#e9e9e9",
+					"Dark": "#2c2c2c"
+				}
+			}
+		},
+		"Typography": {
+			"Family": {
+				"Sans": "system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+				"Serif": "Georgia, Cambria, Times New Roman, Times, serif",
+				"Mono": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+			},
+			"Size": {
+				"XS": "0.75rem",
+				"SM": "0.875rem",
+				"MD": "1rem",
+				"LG": "1.125rem",
+				"XL": "1.375rem",
+				"XXL": "1.75rem"
+			},
+			"Weight": {
+				"Regular": "400",
+				"Medium": "500",
+				"Bold": "700"
+			},
+			"LineHeight": {
+				"Tight": "1.2",
+				"Normal": "1.45",
+				"Loose": "1.7"
+			}
+		},
+		"Spacing": {
+			"XS": "4px",
+			"SM": "8px",
+			"MD": "12px",
+			"LG": "16px",
+			"XL": "24px",
+			"XXL": "32px"
+		},
+		"Radius": {
+			"None": "0",
+			"SM": "2px",
+			"MD": "4px",
+			"LG": "8px",
+			"XL": "12px",
+			"Pill": "999px"
+		},
+		"Shadow": {
+			"SM": "0 1px 2px var(--theme-color-shadow-color)",
+			"MD": "0 2px 6px var(--theme-color-shadow-color)",
+			"LG": "0 6px 18px var(--theme-color-shadow-color)"
+		},
+		"ZIndex": {
+			"Base": "0",
+			"Dropdown": "100",
+			"Sticky": "200",
+			"Overlay": "900",
+			"Modal": "1000",
+			"Toast": "2000",
+			"Tooltip": "3000"
+		},
+		"Duration": {
+			"Fast": "100ms",
+			"Normal": "200ms",
+			"Slow": "400ms"
+		}
+	},
+	"Brand": {
+		"Name": "Retold",
+		"Tagline": "What is software if not a tool to tell stories."
+	},
+	"CSS": [
+		{
+			"Hash": "retold-default-brand-accents",
+			"Priority": 600,
+			"Content": "/* pict-default \u2014 subtle brand-aware accents.\n   Falls back gracefully to theme-color tokens when no brand is registered,\n   so non-branded apps still look right. */\na { text-decoration-color: var(--brand-color-primary-mode, var(--theme-color-brand-primary, currentColor)); text-decoration-thickness: 2px; text-underline-offset: 3px; }\nh1 { border-bottom: 2px solid var(--brand-color-primary-mode, var(--theme-color-border-default, transparent)); padding-bottom: 6px; }\nh2 { border-bottom: 1px solid var(--brand-color-secondary-mode, var(--theme-color-border-light, transparent)); padding-bottom: 4px; }"
+		}
+	]
+}

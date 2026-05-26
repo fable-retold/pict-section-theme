@@ -54,7 +54,12 @@ class ThemeRegistry
 		const STARTER =
 		[
 			// Framework defaults
-			{ Hash: 'pict-default',       Category: 'Default',  IsDefault: true,  Bundle: require('./pict-default.json') },
+			// retold-default is the canonical ecosystem default (IsDefault).
+			// pict-default is retained for backwards compatibility with any
+			// consumer that explicitly opts in by Hash; it's no longer the
+			// default theme returned when the picker resolves "the default".
+			{ Hash: 'retold-default',     Category: 'Default',  IsDefault: true,  Bundle: require('./retold-default.json') },
+			{ Hash: 'pict-default',       Category: 'Default',  Bundle: require('./pict-default.json') },
 			{ Hash: 'retold-mono',        Category: 'Default',  Bundle: require('./retold-mono.json') },
 
 			// App-extracted themes (named after their host app)
