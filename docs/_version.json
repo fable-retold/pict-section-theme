@@ -2,6 +2,6 @@
 	"Name": "pict-section-theme",
 	"Version": "1.0.6",
 	"Description": "Pict section that bundles every Retold-ecosystem theme (pict-default, retold-mono, twilight, cyberpunk, daylight, neo-tokyo, …) and exposes three reusable views — a theme picker dropdown, a light/dark/system mode toggle, and an embeddable SVG topbar button that pops a theme submenu via pict-section-modal. Wraps pict-provider-theme.",
-	"GeneratedAt": "2026-05-26T18:24:46.293Z",
-	"GitCommit": "291daad"
+	"GeneratedAt": "2026-05-26T21:14:44.301Z",
+	"GitCommit": "31edef2"
 }
