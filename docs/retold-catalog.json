@@ -1,0 +1,27 @@
+{
+	"Generated": "2026-05-26T18:24:46.154Z",
+	"Mode": "module",
+	"GitHubOrg": "fable-retold",
+	"DefaultBranch": "master",
+	"Module": {
+		"Name": "pict-section-theme",
+		"Repo": "pict-section-theme",
+		"Group": "",
+		"Branch": "master",
+		"HasDocs": true,
+		"HasCover": false,
+		"Sidebar": [],
+		"DocFiles": [
+			"_playground.json",
+			"playground/app.json",
+			"playground/appdata.json",
+			"playground/application.js",
+			"playground/pict.json",
+			"playground/runtime/pict-application.min.js",
+			"playground/runtime/pict-section-modal.min.js",
+			"playground/runtime/pict-section-theme.min.js",
+			"playground/runtime/pict.min.js"
+		]
+	},
+	"Groups": []
+}
