@@ -103,7 +103,7 @@ suite('pict-section-theme', () =>
 				.filter((p) => p.IsDefault);
 			libAssert.strictEqual(tmpDefaults.length, 1,
 				'expected exactly one IsDefault entry; got ' + tmpDefaults.length);
-			libAssert.strictEqual(tmpDefaults[0].Hash, 'pict-default');
+			libAssert.strictEqual(tmpDefaults[0].Hash, 'retold-default');
 		});
 	});
 
