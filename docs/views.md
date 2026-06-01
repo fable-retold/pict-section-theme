@@ -29,7 +29,7 @@ A custom dropdown that lists every theme registered with the runtime, grouped by
 
 > A native `<select>` was deliberately rejected here: `<option>` elements can only render plain text, not the SVG mode glyphs.
 
-**Short-name:** `Picker` · **Destination:** `#Theme-Picker` · **View hash:** `Theme-Picker`
+**Short-name:** `Picker` - **Destination:** `#Theme-Picker` - **View hash:** `Theme-Picker`
 
 ### Modal dependency
 
@@ -63,7 +63,7 @@ A three-segment toggle for **Light / Dark / System** mode. Clicking a segment ca
 
 Like the picker, it subscribes to the runtime's apply event so the active-segment highlight stays in sync with theme changes from elsewhere.
 
-**Short-name:** `ModeToggle` · **Destination:** `#Theme-ModeToggle` · **View hash:** `Theme-ModeToggle`
+**Short-name:** `ModeToggle` - **Destination:** `#Theme-ModeToggle` - **View hash:** `Theme-ModeToggle`
 
 ### Options
 
@@ -92,7 +92,7 @@ Single-mode themes silently ignore the change (and the toggle is shown disabled 
 
 An embeddable SVG button (a sun glyph) sized to drop into an application top bar. Clicking it opens a [pict-section-modal](https://fable-retold.github.io/pict-section-modal/) popup containing the **Theme-Picker**, the **Theme-ModeToggle**, and the **Theme-ScaleSelect**, each under a labelled row. The button itself picks its color from the theme via `currentColor`, so it inherits the surrounding text color.
 
-**Short-name:** `Button` · **Destination:** `#Theme-Button` · **View hash:** `Theme-Button`
+**Short-name:** `Button` - **Destination:** `#Theme-Button` - **View hash:** `Theme-Button`
 
 ### Modal dependency
 

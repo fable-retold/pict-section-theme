@@ -149,9 +149,9 @@ localStorage["pict-section-theme:<scope>"] =
 - `html { zoom: <scale>; }` -- scales everything, including stylesheets that size in `px` (most Retold apps).
 - `:root { --theme-scale: <scale>; }` -- exposed for stylesheets that want explicit `calc(... * var(--theme-scale))` sizing, and addressable from JS.
 
-`applyScale(value)` clamps to the range `0.5`–`3.0` (`MIN_SCALE`–`MAX_SCALE`); non-finite values reset to `1.0` (`DEFAULT_SCALE`). It returns the actually-applied value after clamping, and is idempotent. The module exposes `getActive()` and an `onChange(callback)` listener that mirrors the runtime's apply listener, which is how persistence autosaves on scale change.
+`applyScale(value)` clamps to the range `0.5`-`3.0` (`MIN_SCALE`-`MAX_SCALE`); non-finite values reset to `1.0` (`DEFAULT_SCALE`). It returns the actually-applied value after clamping, and is idempotent. The module exposes `getActive()` and an `onChange(callback)` listener that mirrors the runtime's apply listener, which is how persistence autosaves on scale change.
 
-> The `DefaultScale` provider option and the `ScaleSelect` presets typically range from `0.75` to `2.0`, but the underlying clamp window is wider (`0.5`–`3.0`). A value passed in that window is honored even if it does not match a preset.
+> The `DefaultScale` provider option and the `ScaleSelect` presets typically range from `0.75` to `2.0`, but the underlying clamp window is wider (`0.5`-`3.0`). A value passed in that window is honored even if it does not match a preset.
 
 ## Brand
 

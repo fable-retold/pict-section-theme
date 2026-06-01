@@ -2,12 +2,12 @@
 
 A Pict section that gives every Pict / Retold web application the same
 out-of-the-box chrome: branded top bar, branded bottom bar, theme picker,
-mode toggle, scale select, and a deterministic project-name → SVG logo
+mode toggle, scale select, and a deterministic project-name -> SVG logo
 generator. One `addProvider` call wires it all together.
 
 The point: **stop rewriting the same boilerplate in every app**. Branding,
 navigation chrome, theme switching, dark-mode handling, and favicons are
-solved problems — this module is the solved version.
+solved problems - this module is the solved version.
 
 ---
 
@@ -19,7 +19,7 @@ npm install pict-section-theme
 
 `pict-section-modal` is an optional peer dependency. The Theme-Button uses
 it for the popup menu, and Theme-TopBar / Theme-BottomBar are designed to
-mount inside its `shell()` panels — but every other view works without it.
+mount inside its `shell()` panels - but every other view works without it.
 
 ---
 
@@ -93,7 +93,7 @@ npx pict-section-theme-brand \
     --module   my-app \
     --favicons web-application/favicons
 
-# standalone (any Pict app — uses package.json's `name` + flags)
+# standalone (any Pict app - uses package.json's `name` + flags)
 npx pict-section-theme-brand \
     --palette ocean \
     --display-name "My App" \
@@ -127,7 +127,7 @@ Both modes write into the target package.json:
 }
 ```
 
-…and (when `--favicons` is supplied) a directory of `favicon.svg`,
+...and (when `--favicons` is supplied) a directory of `favicon.svg`,
 `favicon-{16,32,48,64}.png`, `apple-touch-icon.png`, `favicon-{192,512}.png`.
 
 The runtime brand module then becomes:
@@ -149,7 +149,7 @@ Wire it into your build script:
 }
 ```
 
-`prebuild` is an npm convention — it runs automatically before `build`.
+`prebuild` is an npm convention - it runs automatically before `build`.
 
 ### Manifest mode vs. standalone mode
 
@@ -159,7 +159,7 @@ Wire it into your build script:
 | Source of truth | `Retold-Modules-Manifest.json` `Branding` block | package.json `name` + CLI flags |
 | Required flags | `--manifest`, `--module` | none |
 | Optional overrides | (Branding block) | `--palette`, `--display-name`, `--tagline` |
-| Default palette | (none — must specify in Branding) | `mix` |
+| Default palette | (none - must specify in Branding) | `mix` |
 
 Standalone mode also reads optional defaults from `package.json` under
 `retold.brandConfig`:
@@ -183,7 +183,7 @@ the CLI with no flags reproduces the same brand.
 
 `mix` (default), `default`, `desert`, `ocean`, `forest`, `synthwave`,
 `twilight`, `cosmos`, `carnival`. `mix` deterministically picks one of
-synthwave/ocean/desert per project — every project is internally
+synthwave/ocean/desert per project - every project is internally
 cohesive, the ecosystem feels varied.
 
 ---
@@ -196,20 +196,20 @@ Renders into `#Theme-TopBar` by default. Standard layout:
 
 ```
 ┌────────────────────────────────────────────────────────────────────┐
-│ [Brand-Mark]  [── Nav slot (flex-grow) ──]  [User-slot] [⚙ Theme]  │
+│ [Brand-Mark]  [── Nav slot (flex-grow) ──]  [User-slot] [Theme]    │
 │ ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔ brand-primary stripe ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔ │
 │ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ brand-secondary hairline ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ │
 └────────────────────────────────────────────────────────────────────┘
 ```
 
 The brand stripes at the bottom are how you tell six tabs of different
-apps apart at a glance — every app gets a unique color combination from
+apps apart at a glance - every app gets a unique color combination from
 its deterministic logo.
 
 **Slots**
 
-- `#Theme-TopBar-Nav` — host fills via `NavView` option
-- `#Theme-TopBar-User` — host fills via `UserView` option
+- `#Theme-TopBar-Nav` - host fills via `NavView` option
+- `#Theme-TopBar-User` - host fills via `UserView` option
 
 **Options**
 
@@ -245,9 +245,9 @@ Renders into `#Theme-BottomBar` by default. Three slots:
 
 **Slots**
 
-- `#Theme-BottomBar-Status` — host fills via `StatusView` option
-- `#Theme-BottomBar-Info` — host fills via `InfoView` option (centered)
-- `#Theme-BottomBar-Actions` — host fills via `ActionsView` option
+- `#Theme-BottomBar-Status` - host fills via `StatusView` option
+- `#Theme-BottomBar-Info` - host fills via `InfoView` option (centered)
+- `#Theme-BottomBar-Actions` - host fills via `ActionsView` option
 
 **Options**
 
@@ -285,7 +285,7 @@ onBeforeRender()
 }
 ```
 
-The empty string is fine — only `aria-current="page"` matches the
+The empty string is fine - only `aria-current="page"` matches the
 selector, blank/missing renders un-styled.
 
 ---
@@ -295,33 +295,33 @@ selector, blank/missing renders un-styled.
 Two responsive breakpoints handle the typical "this app got too narrow"
 cases without the host writing any code:
 
-**Below 720px** (default — the brand-mark breakpoint):
+**Below 720px** (default - the brand-mark breakpoint):
 `.pict-theme-brand-mark-name` collapses to icon-only. The deterministic
 logo is recognisable on its own.
 
-**Below 900px** (default — the `CompactBreakpoint` option on Theme-TopBar):
-The nav slot and user-slot hide; a burger button (`☰`) appears in their
+**Below 900px** (default - the `CompactBreakpoint` option on Theme-TopBar):
+The nav slot and user-slot hide; a burger button appears in their
 place. Clicking the burger opens a `pict-section-modal` popup containing
 a clone of the original nav + user DOM, so every action remains
 reachable. Inline `onclick="..."` handlers on the cloned buttons keep
 working because they resolve `_Pict` at click time.
 
-900px is the conventional "narrow desktop window" breakpoint — a docked
+900px is the conventional "narrow desktop window" breakpoint - a docked
 window next to another app or a half-screen split typically lands in this
 range. Most desktop users will hit it while shrinking, where 600px is
 mobile-only territory most desktops never reach.
 
-**Coordinate with the shell — `ResponsiveDrawer` on side panels.**
+**Coordinate with the shell - `ResponsiveDrawer` on side panels.**
 If your layout uses `pict-section-modal`'s `shell()` API with a sidebar
 or other side panel, the topbar's burger breakpoint won't actually
-trigger unless the sidebar gets out of the way too — the sidebar's
+trigger unless the sidebar gets out of the way too - the sidebar's
 `MinSize` plus the workspace's min-content width pins the page
 horizontally and the browser window can't shrink past that point.
 
 Pass `ResponsiveDrawer: <breakpoint>` to the side panel's
 `addPanel()` call. The shell registers a matchMedia listener and
 **flips the middle row's layout from row to column** at that
-viewport width — the side panel stretches to full width and becomes
+viewport width - the side panel stretches to full width and becomes
 a top drawer above the workspace (mirroring retold-remote's
 content-editor pattern). Above the breakpoint it snaps back into the
 docked column. The user's collapse / expand keeps working in both
@@ -330,7 +330,7 @@ modes: collapsed in drawer mode just gives the panel `height: 0`
 its `DrawerHeight` (default `33vh`).
 
 ```js
-// Sidebar — flips to top drawer at the same threshold as the topbar
+// Sidebar - flips to top drawer at the same threshold as the topbar
 this._shell.addPanel({
     Hash: 'sidebar',
     Side: 'left',
@@ -352,13 +352,13 @@ Override per-app from the recommended ladder:
 ```js
 ViewOptions:
 {
-    // Nav-heavy app with 6+ buttons + a brand mark — earlier collapse
+    // Nav-heavy app with 6+ buttons + a brand mark - earlier collapse
     TopBar: { ..., CompactBreakpoint: 1024 }
 
-    // Minimal nav, less crowded — later collapse
+    // Minimal nav, less crowded - later collapse
     TopBar: { ..., CompactBreakpoint: 768 }
 
-    // Mobile-only collapse — only triggers at true phone widths
+    // Mobile-only collapse - only triggers at true phone widths
     TopBar: { ..., CompactBreakpoint: 600 }
 
     // Disable compact mode entirely (desktop-only app)
@@ -367,11 +367,11 @@ ViewOptions:
 ```
 
 Pass `0` to disable compact mode entirely (the burger stays hidden and
-the nav + user-slot always show — useful for desktop-only apps that
+the nav + user-slot always show - useful for desktop-only apps that
 don't need a mobile layout).
 
-**Between 600–720px** (or whatever your breakpoints are), the nav slot
-scrolls horizontally instead of clipping. This is silent degradation —
+**Between 600-720px** (or whatever your breakpoints are), the nav slot
+scrolls horizontally instead of clipping. This is silent degradation -
 fine for moderately-overflowed nav rows but if you have a *lot* of
 buttons, consider an in-template "More ▾" button:
 
@@ -385,7 +385,7 @@ buttons, consider an in-template "More ▾" button:
 
 True priority+ overflow detection (auto-detect which buttons fit and
 roll the rest into a "More ▾" menu at runtime) is not currently built
-in — call it out as a future enhancement if you need it.
+in - call it out as a future enhancement if you need it.
 
 ### Customising the burger popup
 
@@ -442,7 +442,7 @@ Named exports:
 | `clearPersistence(pict)` | function | Wipe the saved theme/mode/scale entry |
 
 The deterministic logo generator lives at
-`pict-section-theme/source/Theme-Logo.js` — require it directly when
+`pict-section-theme/source/Theme-Logo.js` - require it directly when
 you need it (the build CLI does), but it's intentionally kept out of
 the main exports so app bundles don't ship the generator code.
 
@@ -452,11 +452,11 @@ the main exports so app bundles don't ship the generator code.
 |---|---|---|
 | `ApplyDefault` | `null` | Theme hash to apply at boot |
 | `DefaultMode` | `null` | `'light'` / `'dark'` / `'system'` / `null` |
-| `DefaultScale` | `null` | `0.75`–`2.0` |
+| `DefaultScale` | `null` | `0.75`-`2.0` |
 | `Persistence` | `true` | Persist theme/mode/scale to localStorage |
-| `PersistenceKey` | `null` | Storage scope; null → window.location.hostname |
+| `PersistenceKey` | `null` | Storage scope; null -> window.location.hostname |
 | `RegisterCatalog` | `true` | Register every bundled theme |
-| `Views` | `null` | Array of view shortnames; null → all |
+| `Views` | `null` | Array of view shortnames; null -> all |
 | `ViewOptions` | `null` | Per-view option overrides |
 | `Brand` | `null` | The `retold.brand` block from your package.json |
 | `ProviderOptions` | `null` | `pict-provider-theme` overrides |
@@ -492,22 +492,22 @@ your `index.html`.
 You probably have something like this today:
 
 ```
-PictView-MyApp-TopBar.js          ← combined brand + nav + theme button (200+ lines)
-PictView-MyApp-StatusBar.js       ← combined status text (50 lines)
-MyApp-Brand.js                    ← hardcoded SVG / colors (60 lines)
-public/favicons/                  ← hand-edited
-css/myapp-themes.css              ← hand-rolled --color-* tokens
+PictView-MyApp-TopBar.js          <- combined brand + nav + theme button (200+ lines)
+PictView-MyApp-StatusBar.js       <- combined status text (50 lines)
+MyApp-Brand.js                    <- hardcoded SVG / colors (60 lines)
+public/favicons/                  <- hand-edited
+css/myapp-themes.css              <- hand-rolled --color-* tokens
 ```
 
 After migration:
 
 ```
-PictView-MyApp-TopBar-Nav.js      ← just nav buttons (30 lines)
-PictView-MyApp-TopBar-User.js     ← user widgets (20 lines)
-PictView-MyApp-StatusBar.js       ← status text (15 lines)
-MyApp-Brand.js                    ← 1 require + 1 module.exports (5 lines)
-public/favicons/                  ← generated by CLI
-                                  ← theme tokens come from pict-section-theme
+PictView-MyApp-TopBar-Nav.js      <- just nav buttons (30 lines)
+PictView-MyApp-TopBar-User.js     <- user widgets (20 lines)
+PictView-MyApp-StatusBar.js       <- status text (15 lines)
+MyApp-Brand.js                    <- 1 require + 1 module.exports (5 lines)
+public/favicons/                  <- generated by CLI
+                                  <- theme tokens come from pict-section-theme
 ```
 
 Concrete pilot: see retold-manager's bootstrap in
@@ -517,4 +517,4 @@ Concrete pilot: see retold-manager's bootstrap in
 
 ## License
 
-MIT — Steven Velozo
+MIT - Steven Velozo
