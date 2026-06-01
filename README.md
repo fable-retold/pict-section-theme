@@ -1,5 +1,7 @@
 # pict-section-theme
 
+> **[Read the pict-section-theme Documentation](https://fable-retold.github.io/pict-section-theme/)**
+
 A Pict section that gives every Pict / Retold web application the same
 out-of-the-box chrome: branded top bar, branded bottom bar, theme picker,
 mode toggle, scale select, and a deterministic project-name -> SVG logo
