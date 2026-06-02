@@ -21,28 +21,8 @@ The point: stop rewriting theme switching, dark-mode handling, brand chrome, and
 
 The default export is a Pict provider. Registering it ensures the [pict-provider-theme](https://fable-retold.github.io/pict-provider-theme/) runtime exists, registers every bundled theme, adds the requested views, hydrates persisted choices (falling back to your configured defaults), wires the save-on-change handler, and applies the supplied brand.
 
-```mermaid
-graph TD
-    A[Your Application] --> B[PictSectionThemeProvider]
-    B --> C[pict-provider-theme runtime]
-    B --> D[Theme Catalog registry]
-    B --> E[Views: Picker / ModeToggle / ScaleSelect / Button / Brand]
-    B --> F[Persistence localStorage]
-    B --> G[Theme-Brand CSS variables]
-
-    C --> H[Single style#pict-theme element]
-    E --> I[pict-section-modal popup/dropdown]
-
-    style A fill:#e8f5e9,stroke:#42b983,color:#333
-    style B fill:#e3f2fd,stroke:#42a5f5,color:#333
-    style C fill:#fff3e0,stroke:#ffa726,color:#333
-    style D fill:#fff3e0,stroke:#ffa726,color:#333
-    style E fill:#fff3e0,stroke:#ffa726,color:#333
-    style F fill:#fff3e0,stroke:#ffa726,color:#333
-    style G fill:#fff3e0,stroke:#ffa726,color:#333
-    style H fill:#fce4ec,stroke:#ef5350,color:#333
-    style I fill:#fce4ec,stroke:#ef5350,color:#333
-```
+<!-- bespoke diagram: edit diagrams/architecture-at-a-glance.mmd or .hints.json, then: npx pict-renderer-graph build modules/pict/pict-section-theme/docs -->
+![Architecture at a Glance](diagrams/architecture-at-a-glance.svg)
 
 See [Architecture](architecture.md) for the bootstrap sequence, the theme runtime relationship, and the persistence model.
 

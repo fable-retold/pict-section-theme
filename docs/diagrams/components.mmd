@@ -1,0 +1,32 @@
+graph TB
+    subgraph App["Your Application"]
+        AppCode[addProvider 'Theme-Section']
+    end
+
+    subgraph Section["pict-section-theme"]
+        Prov[PictSectionThemeProvider]
+        Cat[Theme Catalog registry]
+        Views[Theme views]
+        Persist[Theme-Persistence]
+        Scale[Theme-Scale]
+        Brand[Theme-Brand]
+    end
+
+    subgraph Runtime["pict-provider-theme"]
+        RT[Theme runtime]
+        Style[style#pict-theme]
+    end
+
+    AppCode --> Prov
+    Prov --> RT
+    Prov --> Cat
+    Prov --> Views
+    Prov --> Persist
+    Prov --> Scale
+    Prov --> Brand
+    Cat --> RT
+    RT --> Style
+
+    style App fill:#e8f5e9,stroke:#42b983,color:#333
+    style Section fill:#e3f2fd,stroke:#42a5f5,color:#333
+    style Runtime fill:#fff3e0,stroke:#ffa726,color:#333

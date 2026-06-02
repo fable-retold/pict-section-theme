@@ -16,40 +16,8 @@ The package entry point is `source/Pict-Section-Theme.js`. Its default export is
 | Theme-Brand | `Theme-Brand.js` | Applies a host-supplied brand block as CSS custom properties. |
 | Theme-Logo | `Theme-Logo.js` | The deterministic name -> SVG logo generator. Build-time only; not required by the runtime entry point. |
 
-```mermaid
-graph TB
-    subgraph App["Your Application"]
-        AppCode[addProvider 'Theme-Section']
-    end
-
-    subgraph Section["pict-section-theme"]
-        Prov[PictSectionThemeProvider]
-        Cat[Theme Catalog registry]
-        Views[Theme views]
-        Persist[Theme-Persistence]
-        Scale[Theme-Scale]
-        Brand[Theme-Brand]
-    end
-
-    subgraph Runtime["pict-provider-theme"]
-        RT[Theme runtime]
-        Style[style#pict-theme]
-    end
-
-    AppCode --> Prov
-    Prov --> RT
-    Prov --> Cat
-    Prov --> Views
-    Prov --> Persist
-    Prov --> Scale
-    Prov --> Brand
-    Cat --> RT
-    RT --> Style
-
-    style App fill:#e8f5e9,stroke:#42b983,color:#333
-    style Section fill:#e3f2fd,stroke:#42a5f5,color:#333
-    style Runtime fill:#fff3e0,stroke:#ffa726,color:#333
-```
+<!-- bespoke diagram: edit diagrams/components.mmd or .hints.json, then: npx pict-renderer-graph build modules/pict/pict-section-theme/docs -->
+![Components](diagrams/components.svg)
 
 ## Bootstrap Sequence
 
@@ -64,28 +32,8 @@ The bootstrap performs these steps in order:
 5. **Fallback.** If nothing resolved a theme hash -- no `ApplyDefault`, no saved state, or a saved hash that has since been removed -- fall back to the catalog's canonical default (the entry flagged `IsDefault`). This guarantees the app always boots with CSS variables populated rather than painting with the intentionally-bland inline fallback colors.
 6. **Brand.** If a `Brand` block was supplied, apply it last, so the brand views' first paint sees the CSS custom properties.
 
-```mermaid
-sequenceDiagram
-    participant App as Application
-    participant P as PictSectionThemeProvider
-    participant RT as Theme runtime
-    participant PS as Theme-Persistence
-
-    App->>P: addProvider('Theme-Section', options)
-    P->>RT: addProvider('Theme') if absent
-    P->>RT: registerTheme() per catalog entry
-    P->>P: addView() per requested view
-    P->>PS: load(storageKey)
-    alt saved entry valid
-        PS-->>P: { ThemeHash, Mode, Scale }
-    else no saved entry
-        P->>P: use ApplyDefault / catalog default
-    end
-    P->>RT: onApply(saveCurrent)
-    P->>RT: applyTheme(bootHash, bootMode)
-    Note over P: applyScale + applyBrand if configured
-    P-->>App: provider ready
-```
+<!-- bespoke diagram: edit diagrams/bootstrap-sequence.mmd or .hints.json, then: npx pict-renderer-graph build modules/pict/pict-section-theme/docs -->
+![Bootstrap Sequence](diagrams/bootstrap-sequence.svg)
 
 ## Theme Catalog
 

@@ -1,0 +1,20 @@
+sequenceDiagram
+    participant App as Application
+    participant P as PictSectionThemeProvider
+    participant RT as Theme runtime
+    participant PS as Theme-Persistence
+
+    App->>P: addProvider('Theme-Section', options)
+    P->>RT: addProvider('Theme') if absent
+    P->>RT: registerTheme() per catalog entry
+    P->>P: addView() per requested view
+    P->>PS: load(storageKey)
+    alt saved entry valid
+        PS-->>P: { ThemeHash, Mode, Scale }
+    else no saved entry
+        P->>P: use ApplyDefault / catalog default
+    end
+    P->>RT: onApply(saveCurrent)
+    P->>RT: applyTheme(bootHash, bootMode)
+    Note over P: applyScale + applyBrand if configured
+    P-->>App: provider ready

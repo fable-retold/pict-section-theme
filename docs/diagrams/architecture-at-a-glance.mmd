@@ -1,0 +1,20 @@
+graph TD
+    A[Your Application] --> B[PictSectionThemeProvider]
+    B --> C[pict-provider-theme runtime]
+    B --> D[Theme Catalog registry]
+    B --> E[Views: Picker / ModeToggle / ScaleSelect / Button / Brand]
+    B --> F[Persistence localStorage]
+    B --> G[Theme-Brand CSS variables]
+
+    C --> H[Single style#pict-theme element]
+    E --> I[pict-section-modal popup/dropdown]
+
+    style A fill:#e8f5e9,stroke:#42b983,color:#333
+    style B fill:#e3f2fd,stroke:#42a5f5,color:#333
+    style C fill:#fff3e0,stroke:#ffa726,color:#333
+    style D fill:#fff3e0,stroke:#ffa726,color:#333
+    style E fill:#fff3e0,stroke:#ffa726,color:#333
+    style F fill:#fff3e0,stroke:#ffa726,color:#333
+    style G fill:#fff3e0,stroke:#ffa726,color:#333
+    style H fill:#fce4ec,stroke:#ef5350,color:#333
+    style I fill:#fce4ec,stroke:#ef5350,color:#333
