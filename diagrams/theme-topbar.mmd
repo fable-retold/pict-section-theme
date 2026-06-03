@@ -1,0 +1,10 @@
+graph LR
+    subgraph TopBar["Theme-TopBar"]
+        BrandMark["Brand-Mark"]
+        NavSlot["Nav slot (flex-grow)"]
+        UserSlot["User-slot"]
+        ThemeBtn["Theme"]
+        Stripe1["brand-primary stripe"]
+        Stripe2["brand-secondary hairline"]
+    end
+    BrandMark --> NavSlot --> UserSlot --> ThemeBtn

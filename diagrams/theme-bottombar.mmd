@@ -1,0 +1,9 @@
+graph LR
+    subgraph BottomBar["Theme-BottomBar"]
+        Hairline["brand-secondary hairline"]
+        ThinLine["brand-primary thin line"]
+        StatusText["Status text"]
+        InfoSlot["Info slot (flex)"]
+        Actions["actions"]
+    end
+    StatusText --> InfoSlot --> Actions

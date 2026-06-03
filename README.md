@@ -196,13 +196,8 @@ cohesive, the ecosystem feels varied.
 
 Renders into `#Theme-TopBar` by default. Standard layout:
 
-```
-┌────────────────────────────────────────────────────────────────────┐
-│ [Brand-Mark]  [── Nav slot (flex-grow) ──]  [User-slot] [Theme]    │
-│ ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔ brand-primary stripe ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔ │
-│ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ brand-secondary hairline ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ │
-└────────────────────────────────────────────────────────────────────┘
-```
+<!-- bespoke diagram: edit diagrams/theme-topbar.mmd or .hints.json, then: npx pict-renderer-graph build modules/pict/pict-section-theme -->
+![Theme-TopBar](diagrams/theme-topbar.svg)
 
 The brand stripes at the bottom are how you tell six tabs of different
 apps apart at a glance - every app gets a unique color combination from
@@ -237,13 +232,8 @@ this.pict.views['Theme-TopBar'].setUserView('MyApp-Account-Widget');
 
 Renders into `#Theme-BottomBar` by default. Three slots:
 
-```
-┌────────────────────────────────────────────────────────────────────┐
-│ ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔ brand-secondary hairline ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔ │
-│ ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔ brand-primary thin line ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔ │
-│ Status text          [── Info slot (flex) ──]      [actions]       │
-└────────────────────────────────────────────────────────────────────┘
-```
+<!-- bespoke diagram: edit diagrams/theme-bottombar.mmd or .hints.json, then: npx pict-renderer-graph build modules/pict/pict-section-theme -->
+![Theme-BottomBar](diagrams/theme-bottombar.svg)
 
 **Slots**
 
