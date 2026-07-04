@@ -129,6 +129,33 @@ function _byte01(pByte)
 	return pByte / 255;
 }
 
+function _unit(pX, pY)
+{
+	let tmpLen = Math.sqrt(pX * pX + pY * pY) || 1;
+	return [pX / tmpLen, pY / tmpLen];
+}
+
+// Rounded regular-polygon path: straight edges joined by quadratic corner
+// fillets. Softens the hexagon frame so it reads premium, not badge-y.
+function _roundedPolygon(pPoints, pRadius)
+{
+	let tmpD = '';
+	let tmpN = pPoints.length;
+	for (let i = 0; i < tmpN; i++)
+	{
+		let tmpPrev = pPoints[(i + tmpN - 1) % tmpN];
+		let tmpCur = pPoints[i];
+		let tmpNext = pPoints[(i + 1) % tmpN];
+		let tmpV1 = _unit(tmpPrev[0] - tmpCur[0], tmpPrev[1] - tmpCur[1]);
+		let tmpV2 = _unit(tmpNext[0] - tmpCur[0], tmpNext[1] - tmpCur[1]);
+		let tmpP1 = [tmpCur[0] + tmpV1[0] * pRadius, tmpCur[1] + tmpV1[1] * pRadius];
+		let tmpP2 = [tmpCur[0] + tmpV2[0] * pRadius, tmpCur[1] + tmpV2[1] * pRadius];
+		tmpD += (i === 0 ? 'M ' : ' L ') + tmpP1[0].toFixed(2) + ' ' + tmpP1[1].toFixed(2);
+		tmpD += ' Q ' + tmpCur[0].toFixed(2) + ' ' + tmpCur[1].toFixed(2) + ' ' + tmpP2[0].toFixed(2) + ' ' + tmpP2[1].toFixed(2);
+	}
+	return tmpD + ' Z';
+}
+
 function _twoBytes01(pHi, pLo)
 {
 	return (pHi * 256 + pLo) / 65535;
@@ -353,23 +380,43 @@ function deriveBrand(pBytes, pPaletteKey)
 }
 
 // ── Monogram ─────────────────────────────────────────────────────────────
+// Generic packaging words that carry no brand identity — dropped so the
+// monogram keys off the meaningful words (monorepo-manager-WEBINTERFACE → MM,
+// not MMW; pict-section-modal → PM, not PSM).
+const MONOGRAM_NOISE = {
+	web: 1, webinterface: 1, ui: 1, app: 1, application: 1, js: 1, ts: 1, cjs: 1, mjs: 1,
+	core: 1, lib: 1, library: 1, module: 1, sdk: 1, api: 1, service: 1, server: 1, client: 1,
+	example: 1, examples: 1, demo: 1, test: 1, tests: 1, www: 1, site: 1, the: 1, and: 1, my: 1
+};
+
+// A readable monogram is 1–2 characters. One significant word → its initial;
+// two or more → the initials of the FIRST and LAST significant words (which
+// captures the distinctive head + tail, e.g. Pict…Modal → PM, Retold…Manager
+// → RM). Longer, cramped monograms are the #1 readability killer at nav size.
 function extractMonogram(pName)
 {
-	let tmpSegments = String(pName || '').split('-').filter((pSeg) => pSeg.length > 0);
-	let tmpInitials = tmpSegments.map((pSeg) => pSeg.charAt(0).toUpperCase());
-	if (tmpInitials.length > 4) tmpInitials = tmpInitials.slice(0, 4);
-	return tmpInitials.join('') || '?';
+	let tmpWords = String(pName || '')
+		.replace(/^@[^/]+\//, '')            // drop an npm scope
+		.split(/[-_\s./]+/)
+		.filter((pWord) => pWord.length > 0);
+	let tmpSignificant = tmpWords.filter((pWord) => !MONOGRAM_NOISE[pWord.toLowerCase()]);
+	if (tmpSignificant.length === 0) { tmpSignificant = tmpWords; }   // all noise → fall back to raw
+	if (tmpSignificant.length === 0) { return '?'; }
+
+	let tmpInitials = (tmpSignificant.length === 1)
+		? [ tmpSignificant[0].charAt(0) ]
+		: [ tmpSignificant[0].charAt(0), tmpSignificant[tmpSignificant.length - 1].charAt(0) ];
+	return tmpInitials.map((pChar) => pChar.toUpperCase()).join('') || '?';
 }
 
 function monogramFontSize(pMonogram)
 {
 	switch (pMonogram.length)
 	{
-		case 1: return 56;
-		case 2: return 38;
-		case 3: return 28;
-		case 4: return 22;
-		default: return 20;
+		case 1: return 60;
+		case 2: return 46;
+		case 3: return 32;   // legacy fallback (extractMonogram now caps at 2)
+		default: return 26;
 	}
 }
 
@@ -402,10 +449,9 @@ const FRAME_VARIANTS = [
 		for (let i = 0; i < 6; i++)
 		{
 			let tmpAng = (Math.PI / 3) * i - Math.PI / 2;
-			tmpPts.push((tmpCx + tmpR * Math.cos(tmpAng)).toFixed(2)
-				+ ' ' + (tmpCy + tmpR * Math.sin(tmpAng)).toFixed(2));
+			tmpPts.push([tmpCx + tmpR * Math.cos(tmpAng), tmpCy + tmpR * Math.sin(tmpAng)]);
 		}
-		return 'M ' + tmpPts[0] + ' L ' + tmpPts.slice(1).join(' L ') + ' Z';
+		return _roundedPolygon(tmpPts, tmpR * 0.2);
 	},
 	(pBox) =>
 	{
@@ -735,60 +781,28 @@ const COMPOSITIONS = [
 const VARIANT_KEYS = ['filled-light', 'filled-dark', 'outline-light', 'outline-dark'];
 
 // ── Variant rendering ────────────────────────────────────────────────────
+// Clean, favicon-style: the frame carries the monogram and nothing sits behind
+// it. The mark renders small (a ~22px topbar chip, a favicon), so legibility of
+// the letters + distinguishability by frame color beats a layered composition.
 function renderVariant(pVariant, pSpec)
 {
-	let tmpClipID = 'frame-' + pSpec.IDSafe + '-' + pVariant;
 	let tmpBg, tmpFg, tmpStroke, tmpStrokeWidth = 0;
-	let tmpInside;
 
 	switch (pVariant)
 	{
 		case 'filled-light':
-			tmpBg = pSpec.Brand.Primary.LightTheme;
-			tmpFg = '#ffffff';
-			// On a primary-colored background, the mark needs lighter
-			// shapes — use the secondary color and a translucent white
-			// for readable contrast against the bg.
-			tmpInside = pSpec.Composition.Build(pSpec.HashBytes,
-			{
-				Primary: 'rgba(255,255,255,0.18)',  // soft "primary" silhouette
-				Secondary: pSpec.Brand.Secondary.LightTheme,
-				PrimaryDeep: 'rgba(255,255,255,0.32)'
-			}).Inside;
+			tmpBg = pSpec.Brand.Primary.LightTheme; tmpFg = '#ffffff';
 			break;
 		case 'filled-dark':
-			tmpBg = pSpec.Brand.Primary.DarkTheme;
-			tmpFg = '#101418';
-			tmpInside = pSpec.Composition.Build(pSpec.HashBytes,
-			{
-				Primary: 'rgba(0,0,0,0.18)',
-				Secondary: pSpec.Brand.Secondary.DarkTheme,
-				PrimaryDeep: 'rgba(0,0,0,0.32)'
-			}).Inside;
+			tmpBg = pSpec.Brand.Primary.DarkTheme; tmpFg = '#101418';
 			break;
 		case 'outline-light':
-			tmpBg = 'transparent';
-			tmpFg = pSpec.Brand.Primary.LightTheme;
-			tmpStroke = pSpec.Brand.Primary.LightTheme;
-			tmpStrokeWidth = 4;
-			tmpInside = pSpec.Composition.Build(pSpec.HashBytes,
-			{
-				Primary: pSpec.Brand.Primary.LightTheme,
-				Secondary: pSpec.Brand.Secondary.LightTheme,
-				PrimaryDeep: pSpec.Brand.Primary.LightTheme
-			}).OutlineInside;
+			tmpBg = 'transparent'; tmpFg = pSpec.Brand.Primary.LightTheme;
+			tmpStroke = pSpec.Brand.Primary.LightTheme; tmpStrokeWidth = 4;
 			break;
 		case 'outline-dark':
-			tmpBg = 'transparent';
-			tmpFg = pSpec.Brand.Primary.DarkTheme;
-			tmpStroke = pSpec.Brand.Primary.DarkTheme;
-			tmpStrokeWidth = 4;
-			tmpInside = pSpec.Composition.Build(pSpec.HashBytes,
-			{
-				Primary: pSpec.Brand.Primary.DarkTheme,
-				Secondary: pSpec.Brand.Secondary.DarkTheme,
-				PrimaryDeep: pSpec.Brand.Primary.DarkTheme
-			}).OutlineInside;
+			tmpBg = 'transparent'; tmpFg = pSpec.Brand.Primary.DarkTheme;
+			tmpStroke = pSpec.Brand.Primary.DarkTheme; tmpStrokeWidth = 4;
 			break;
 	}
 
@@ -797,65 +811,36 @@ function renderVariant(pVariant, pSpec)
 		: `fill="${tmpBg}"`;
 
 	return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="${pSpec.Size}" height="${pSpec.Size}">
-		<defs>
-			<clipPath id="${tmpClipID}">
-				<path d="${pSpec.FrameD}"/>
-			</clipPath>
-		</defs>
 		<path d="${pSpec.FrameD}" ${tmpFrameAttrs}/>
-		<g clip-path="url(#${tmpClipID})">${tmpInside}</g>
-		<text x="48" y="50" text-anchor="middle" dominant-baseline="central"
+		<text x="48" y="48" text-anchor="middle" dominant-baseline="central"
 			font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
 			font-size="${pSpec.FontSize}" font-weight="${pSpec.FontWeight}"
-			fill="${tmpFg}" letter-spacing="-1">${escapeXML(pSpec.Monogram)}</text>
+			fill="${tmpFg}" letter-spacing="${pSpec.Tracking}">${escapeXML(pSpec.Monogram)}</text>
 	</svg>`;
 }
 
-// ── Favicon-grade simplified rendering ───────────────────────────────────
-// At 32-px the layered compositions become noise. Drop everything except:
-//   - the frame in the primary color
-//   - a single-character monogram (first letter only) in white
-//   - a single bold accent shape (the composition's `Favicon` payload)
-// Result is high-contrast and reads cleanly at 16x16, too.
+// ── Favicon-grade rendering ──────────────────────────────────────────────
+// The favicon is tuned for the hardest case: reading the characters and
+// telling modules apart at 16-32px. So it drops the layered composition
+// entirely — a clean primary-color frame carries the FULL 1-2 char monogram,
+// bold and high-contrast. The frame color distinguishes the family; the
+// monogram distinguishes the specific module (pict → P, pict-section-modal →
+// PM, pict-section-recordset → PR — all legible + distinct at favicon size).
 function renderFavicon(pSpec, pTheme)
 {
-	let tmpBg, tmpFg, tmpAccentColor;
-	if (pTheme === 'dark')
-	{
-		tmpBg = pSpec.Brand.Primary.DarkTheme;
-		tmpFg = '#101418';
-		tmpAccentColor = pSpec.Brand.Secondary.DarkTheme;
-	}
-	else
-	{
-		tmpBg = pSpec.Brand.Primary.LightTheme;
-		tmpFg = '#ffffff';
-		tmpAccentColor = pSpec.Brand.Secondary.LightTheme;
-	}
+	let tmpBg = (pTheme === 'dark') ? pSpec.Brand.Primary.DarkTheme : pSpec.Brand.Primary.LightTheme;
+	let tmpFg = (pTheme === 'dark') ? '#101418' : '#ffffff';
 
-	let tmpFavInside = pSpec.Composition.Build(pSpec.HashBytes,
-	{
-		Primary: 'rgba(255,255,255,0.22)',
-		Secondary: tmpAccentColor,
-		PrimaryDeep: 'rgba(255,255,255,0.36)'
-	}).Favicon;
-
-	// Single-letter monogram for legibility at small size.
-	let tmpFaviconLetter = pSpec.Monogram.charAt(0);
-	let tmpClipID = 'fav-' + pSpec.IDSafe + '-' + pTheme;
+	let tmpMono = pSpec.Monogram;
+	let tmpFavSize = (tmpMono.length >= 2) ? 50 : 64;   // bigger than the topbar mark — the letters ARE the favicon
+	let tmpFavTrack = (tmpMono.length >= 2) ? -3 : -1;
 
 	return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="${pSpec.Size}" height="${pSpec.Size}">
-		<defs>
-			<clipPath id="${tmpClipID}">
-				<path d="${pSpec.FrameD}"/>
-			</clipPath>
-		</defs>
 		<path d="${pSpec.FrameD}" fill="${tmpBg}"/>
-		<g clip-path="url(#${tmpClipID})">${tmpFavInside}</g>
-		<text x="48" y="50" text-anchor="middle" dominant-baseline="central"
+		<text x="48" y="48" text-anchor="middle" dominant-baseline="central"
 			font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
-			font-size="60" font-weight="800"
-			fill="${tmpFg}" letter-spacing="-1">${escapeXML(tmpFaviconLetter)}</text>
+			font-size="${tmpFavSize}" font-weight="800"
+			fill="${tmpFg}" letter-spacing="${tmpFavTrack}">${escapeXML(tmpMono)}</text>
 	</svg>`;
 }
 
@@ -874,9 +859,12 @@ function generateLogo(pName, pOptions)
 	let tmpCompIdx = tmpBytes[5] % COMPOSITIONS.length;
 	let tmpComposition = COMPOSITIONS[tmpCompIdx];
 
-	let tmpMonogram = tmpOptions.Monogram || extractMonogram(pName);
+	// Monogram derives from the DisplayName when the caller has one (so the human
+	// name drives the letters, not the raw package id); an explicit Monogram wins.
+	let tmpMonogram = tmpOptions.Monogram || extractMonogram(tmpOptions.DisplayName || pName);
 	let tmpFontSize = monogramFontSize(tmpMonogram);
-	let tmpFontWeight = (tmpBytes[6] & 1) ? 700 : 600;
+	let tmpFontWeight = (tmpMonogram.length === 1) ? 800 : 700;   // heavier = more legible at nav size
+	let tmpTracking = (tmpMonogram.length >= 2) ? -3 : -1;        // tighter pairs read as one unit
 
 	let tmpIDSafe = String(pName).replace(/[^a-zA-Z0-9_-]/g, '_');
 
@@ -888,6 +876,7 @@ function generateLogo(pName, pOptions)
 		Monogram: tmpMonogram,
 		FontSize: tmpFontSize,
 		FontWeight: tmpFontWeight,
+		Tracking: tmpTracking,
 		Brand: tmpBrand,
 		IDSafe: tmpIDSafe,
 		Size: tmpSize
